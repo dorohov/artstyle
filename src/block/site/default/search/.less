@@ -1,0 +1,98 @@
+.search-block{
+	margin-bottom: 55px;
+	border: 3px solid @b-search-border;
+	position: relative;
+   	padding: 20px 10px 15px;
+	@media @media-device{margin-bottom: 25px; margin-top: 10px;}
+	@media @media-size-mdl{
+		margin-bottom: 20px;
+   		padding: 15px 10px 10px;
+	}
+	@media @media-size-xl{margin-bottom: 35px;}
+}
+.search-block__heading{
+	font-family: @b-search-h-ff;
+	font-size: @b-search-h-fs;
+	line-height: @b-search-h-lh;
+	text-transform: uppercase;
+	font-weight: normal;
+	background: @white;    
+	position: absolute;
+	top: 0px;
+	left: 15px;
+	margin: 0;
+	transform: translateY(-50%);
+	padding: 0 5px;
+	@media @media-size-mdl{
+		font-size: @b-search-h-fs - 2px;
+		line-height: @b-search-h-lh - 2px;
+	}
+}
+.search-site{
+	@media @media-device{
+		max-width: 300px;
+	} 
+	.form-control{
+		font-family: @b-search-f-ff;
+		color: @b-search-f-color;
+		height: @b-search-f-height;
+		border-color: @b-search-f-border-color;
+		background: none;
+		transition: @transition-site;
+		box-shadow: none;
+		border-radius: 0;
+		border-right: 0; 
+		padding: 5px 0 5px 10px;
+		&::-webkit-input-placeholder {
+			color: @b-search-f-ph-color;
+			font-family: @b-search-f-ph-ff;
+			font-size: @b-search-f-ph-fs;
+			line-height: @b-search-f-ph-lh;
+			transition: @transition-site;
+		}
+		&:-moz-placeholder {
+			color: @b-search-f-ph-color;
+			font-family: @b-search-f-ph-ff;
+			font-size: @b-search-f-ph-fs;
+			line-height: @b-search-f-ph-lh;
+			transition: @transition-site;
+		}
+		&:focus{
+			border-color: @b-search-f-focus-border-color;			
+			box-shadow: none;
+			border-right: 0; 
+		}
+	}
+	.btn-search{
+		background: none;
+		padding: 0;
+		border: 0;
+		outline: none;    
+		&:focus,
+		&:active{
+			outline: none;
+		} 
+		&:before{
+			font-family: @icon;
+			display: block;
+			background: @b-search-btn-bg;
+			border: 0;
+			padding: 0 15px;
+			line-height: @b-search-f-height;
+			color: @white;
+			transition: @transition-site;
+			border-radius: 0;
+		}
+		&[type="submit"]:before{
+			content: @icon-search;
+			font-size: 18px;
+		}
+		&:hover{
+			//&:before{color: fadeout(@white, 0%);}
+		}
+	}
+	.form-control:focus + .input-group-btn .btn-search:before{
+		//color: fadeout(@white, 0%);
+		background: @b-search-f-focus-border-color;
+	}
+}

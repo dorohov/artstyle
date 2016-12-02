@@ -1,0 +1,128 @@
+.footer-site{
+	position: relative;
+	z-index: 4;
+	color: @b-footer-color;
+	font-size: @b-footer-fs; //15
+	line-height: @b-footer-lh; //24
+	font-family: @b-footer-ff;
+	background-color: @b-footer-bg;	
+	//background-color: red;	
+	//opacity: @opacity;
+	a{
+		&, &:hover, &:focus{color: @b-footer-color;} 
+	}
+	@media @media-size-xs{
+		text-align: center;
+	}
+	@media @media-screen{
+	}
+	.container{
+		padding-top: 45px;
+		padding-bottom: 45px;
+		@media @media-size-xs{
+			padding-top: 35px;
+			padding-bottom: 15px;
+		}
+		@media @media-size-mdl{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	@media @media-size-xs{
+		&.include-navbar-blog{padding-right: 40px;}
+	}
+	@media @media-size-sm{
+		&.include-navbar-blog{padding-right: 60px;}
+	}
+}
+._fs__row{
+	align-items: center;
+	justify-content: space-between;	
+	@media @media-device{flex-wrap: wrap;}
+	> .cols{		
+		@media @media-size-xs{width: 100%; margin-bottom: 20px;}
+	}
+}
+._fs__copyright-cols{
+	font-size: @b-footer-fs - 2px;   //13
+	line-height: @b-footer-lh - 5px; //16
+	width: 30%;
+	@media @media-device{width: 100%; text-align: center; margin-bottom: 20px;}
+	@media @media-size-mdl{width: 20%;}
+	@media @media-size-xl{width: 25%;}
+}
+._fs__contacts-cols{
+	width: 55%;
+	@media @media-device{width: 100%; margin-bottom: 20px;}
+	@media @media-size-mdl{width: 65%;}
+}
+._fs__dorohovdesign-cols{
+	width: 15%;
+	@media @media-device{width: 100%;}
+	@media @media-size-lg{width: 15%;}
+	@media @media-size-xl{width: 20%;}
+}
+._fs__phone-cols{
+	@media @media-size-sm{width: 33.3333%;}
+}
+._fs__icon{
+	position: relative;
+	display: inline-block;
+	padding-left: 25px;
+	&:before{
+		font-family: @icon;
+		color: #4e4e4e;
+		font-size: 16px;
+		line-height: 16px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	&._fs__address{
+		&:before{
+			content: @icon-location;
+		}
+	}
+	&._fs__phone{
+		&:before{
+			content: @icon-tel;
+		}
+	}
+	&._fs__mailto{
+		&:before{
+			content: @icon-mailto;
+		}
+	}
+}
+._fs__address{
+	@media @media-size-xs{margin-bottom: 10px;}
+}
+._fs__phone{
+	@media @media-size-xs{margin-bottom: 10px;}
+}
+._fs__mailto{
+}
+._fs__contacts-row{
+	justify-content: space-between;
+	> .cols{
+		@media @media-size-xs{width: 100%; margin-bottom: 5px}
+	}
+}
+._fs__dorohovdesign-row{
+	align-items: center;
+	@media @media-device{justify-content: center;}
+	@media @media-screen{justify-content: flex-end;}
+	@media @media-size-mdl{flex-wrap: wrap; text-align: center;}
+	> .cols{
+		padding: 0 5px;
+		@media @media-size-mdl{width: 100%;}
+	}
+}
+._fs__dorohovdesign__logo{
+	a{
+		border: none;
+		display: block;
+	}
+	@media @media-size-xs{margin: 0 auto}
+}

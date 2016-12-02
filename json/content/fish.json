@@ -1,0 +1,25 @@
+{
+	"contacts":{
+		"name":"Студия дизайна Ирины Корчевой",
+		"email":"irina@artstyle.in",
+		"phone":"+7 (906) 661-50-11",
+		"phone_tel":"+79066615011",
+		"address":"302040, г. Орёл, ул. Ломоносова, 6А, офис 312"
+	},
+	"soc":{
+		"vk":"https://vk.com/public57147545",
+		"vk_name":"vk.com/public57147545",
+		"fb":"https://www.facebook.com/groups/300842956941501/",
+		"fb_name":"facebook.com/artstyle",
+		"pint":"",
+		"pint_name":"",
+		"inst":"https://www.instagram.com/artstyle/",
+		"inst_name":"instagram.com/artstyle"
+	},
+	"project":{
+		"1":"«Междуречье»",
+		"2":"«Новая Куликовка»",
+		"3":"«Усадьба Образцово»",
+		"4":"«Ново-образцово»"
+	}
+}

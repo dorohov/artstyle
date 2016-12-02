@@ -1,0 +1,54 @@
+@icon: 				Flaticon;
+.include-custom-font(@family: @din, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{family}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(@family: @code, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @code-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @code-lc, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @code-lc-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @far, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @far-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @far-italic, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @far-light, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima, 		@weight: normal, @style: normal);
+
+.include-custom-icon(@family: @icon, 			@weight: normal, @style: normal);
+
+
+@icon-arrow-left: 	"\f100";
+@icon-arrow-right: 	"\f101";
+@icon-car: 			"\f102";
+@icon-close: 		"\f103";
+@icon-down: 		"\f104";
+@icon-eye: 			"\f105";
+@icon-fb: 			"\f106";
+@icon-inst: 		"\f107";
+@icon-like: 		"\f108";
+@icon-location: 	"\f109";
+@icon-mailto: 		"\f10a";
+@icon-next: 		"\f10b";
+@icon-pint: 		"\f10c";
+@icon-play: 		"\f10d";
+@icon-prev: 		"\f10e";
+@icon-project-next: "\f10f";
+@icon-project-prev: "\f110";
+@icon-search: 		"\f111";
+@icon-tel: 			"\f112";
+@icon-tool: 		"\f113";
+@icon-tw: 			"\f114";
+@icon-up: 			"\f115";
+@icon-vk: 			"\f116";

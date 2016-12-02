@@ -1,0 +1,98 @@
+.filter-panel{ 
+	margin: 0 auto 30px;
+	padding: 10px 70px;
+	background: @b-filter-panel-bg;
+	@media @media-size-xs{padding: 10px 20px;}
+	@media @media-size-sm{padding: 10px 25px;}
+	@media @media-size-mdl{padding: 10px 40px;}
+}
+.filter-panel__row{
+	@media @media-device{flex-wrap: wrap;}
+}
+.filter-panel__cols-list{
+	@media @media-device{width: 100%; margin-bottom: 15px; text-align: center;}
+	@media @media-size-sm-l{width: 80%;}
+	@media @media-screen{width: 80%;}
+}
+.filter-panel__cols-dropdown{
+	@media @media-device{width: 100%;}
+	@media @media-size-sm-l{width: 20%;}
+	@media @media-screen{width: 20%; text-align: right;}
+}
+.filter-panel__list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	@media @media-device{flex-wrap: wrap;}
+}
+.filter-panel__list-item{
+	margin-right: 30px;
+	@media @media-device{margin-right: 15px;}
+	@media @media-size-mdl{margin-right: 15px;}
+}
+.filter-panel__list-btn{
+	display: inline-block;
+	padding: 0 10px;
+	font-family: @b-filter-item-ff;
+	font-size: @b-filter-item-fs;
+	line-height: @b-filter-item-lh;
+	letter-spacing: 0.7px;
+	margin-bottom: 5px;
+	position: relative;
+	@media @media-device{
+		line-height: @b-filter-item-lh + 8px; //32px;
+	}
+	&,&:hover,&:focus{color: @b-filter-item-color;}
+	&:hover{
+		background: fadeout(@b-filter-item-bg-hover, 20%);
+	}
+	.dropdown.open &,
+	.filter-panel__list-item.active &{
+		background: @b-filter-item-bg-hover;
+		cursor: default;
+	}
+}
+.filter-panel__list-dropdown{
+	display: inline-block;
+}
+.filter-panel__list-btn-dropdown{
+	padding: 0 25px 0 10px;
+	&::after{
+		position: absolute;
+		font-family: @icon;
+		content: @icon-down;
+		top: 50%;
+		right: 7px;
+		transform: translateY(-50%);
+		font-size: 10px;
+		transition: @transition-site;
+	}
+	.dropdown.open &{
+		&::after{content: @icon-up;}	
+	}
+}
+.filter-panel__list-dropdown-menu{
+	border:0;
+	border-radius: 0;
+	margin-top: 10px;
+	background: @b-filter-panel-bg;
+	box-shadow: none;
+	> li{
+		>a{
+			font-family: @b-filter-item-ff;
+			font-size: @b-filter-item-fs;
+			line-height: @b-filter-item-lh;	
+			&,&:hover,&:focus{color: @b-filter-item-color;}	
+			&:hover{
+				background: fadeout(@b-filter-item-bg-hover, 20%);
+			}	
+		}
+		&.active{
+			> a{
+				background: @b-filter-item-bg-hover;
+				cursor: default;
+			}
+		}
+	}
+}
