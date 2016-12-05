@@ -80,6 +80,13 @@
 	font-family: @proxima;
 	font-size: @b-fs - 2px; //18px
 } 
+.btn-dashed{
+	border-bottom: 1px dashed @blue;
+	&:hover{
+		border-bottom-color: fadeout(@blue, 100%);
+		color: @blue;
+	}
+}
 /*
 .btn-outline-white{	
 	&, &:hover{border: 1px solid @white;} 

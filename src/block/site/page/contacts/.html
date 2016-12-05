@@ -1,3 +1,21 @@
 <div class="{{class}} content-block second"> 
-	<h1 class="heading-site">Контакты</h1> 
+	<!-- <div class="container">
+		<h1 class="heading-site">Контакты</h1> 
+	</div> -->
+	<div class="twoGIS-map__block">
+		<div class="twoGIS-map" id="map"></div>
+		<div class="container">
+			<div class="{{prefix}}contacts">
+				<div>{{contacts.address}}</div>
+				<div><a href="tel:{{contacts.phone_tel}}">{{contacts.phone}}</a></div>
+				<div><a href="mailto:{{contacts.email}}">{{contacts.email}}</a></div>
+				<div class="{{prefix}}contacts-soc">
+					<div><a href="{{soc.vk}}" target="_blank">{{soc.vk_name}}</a></div>
+					<div><a href="{{soc.fb}}" target="_blank">{{soc.fb_name}}</a></div>
+					<div><a href="{{soc.inst}}" target="_blank">{{soc.inst_name}}</a></div>
+				</div>
+				<div><button class="btn-site btn-dashed" type="button">Задать вопрос</button></div>
+			</div>
+		</div>
+	</div>
 </div>

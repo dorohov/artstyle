@@ -3,12 +3,14 @@ var h_window = $(window).height(),
 
 	h_navbar = $('.navbar-site').outerHeight(true),
 	h_header = $('.header-site').outerHeight(true),
+	h_heading = $('.heading-site').outerHeight(true),
 	w_news_preview = $('.news-item__preview').outerWidth(true),
 	h_news_block = $('.news-block').outerHeight(true),
 	h_footer = $('.footer-site').outerHeight(true),
 	h_content_index = h_window - h_navbar,
 	h_content_scroller = h_window - h_navbar - h_footer, 
 	h_content_scroller_sm = h_window - h_header - h_footer - 100, 
+	h_map = h_window - h_navbar - h_footer - h_heading, 
 	h_content = h_window - h_navbar - h_footer;
 
 if (device.tablet()) {
@@ -24,6 +26,7 @@ if (device.mobile()) {
 	$('._adpc__carousel').carousel({
 	    interval : false
 	});	
+	$('.twoGIS-map__block').css("height", h_map);
 }
 if (device.mobile() || device.tablet()) {
 	$('.navbar').addClass('navbar-fixed-top');
@@ -41,6 +44,7 @@ if (device.mobile() || device.tablet()) {
 	});	 
 } else {
 	$('.content-block.second').css("min-height", h_content_scroller);
+	//$('.contacts-page-content').css("height", h_content_scroller);
 	//$('.content-block.second').css("top", h_header);
 	$(".scroller").mCustomScrollbar();	
 }

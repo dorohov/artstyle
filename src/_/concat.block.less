@@ -486,8 +486,11 @@
 	a{
 		border: none;
 		display: block;
+		img{
+			@media @media-size-xs{margin: 0 auto}
+			@media @media-size-mdl{margin: 0 auto}
+		}
 	}
-	@media @media-size-xs{margin: 0 auto}
 }
 .form-site{
 }
@@ -1927,6 +1930,62 @@ textarea._frs__form-control{
 	@media @media-size-sm{width: 50%;}
 }
 .contacts-page-content{
+	@media @media-device{&.second{padding: 0}}
+}
+.twoGIS-map__block{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.twoGIS-map{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	@media @media-size-xs-p{height: 300px;}
+	@media @media-size-xs-l{height: 200px;}
+}
+._cpc__contacts{
+	background-color: @white;
+	font-family: @code;
+	font-size: @b-fs - 3px;
+	line-height: @b-lh - 4px;
+	padding: 35px 20px;
+	letter-spacing: 0.7px;
+	@media @media-size-xs{
+		padding: 15px 0;
+	}
+	@media @media-size-sm-p{		
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+	}
+	@media @media-size-sm-l{		
+		position: absolute;
+		width: 30%;
+		left: 0;
+		bottom: 0;
+	}
+	@media @media-screen{
+		position: absolute;
+		top: 50%;
+		width: 500px;
+		transform: translateY(-50%);		
+	}
+	a{
+		color: @black;
+		&:hover{color: @blue;}
+		&[href^="tel:"]{
+			color: @black;
+		}
+	}
+	@media @media-size-mdl{
+		padding: 25px 20px;
+	}
+}
+._cpc__contacts-soc{
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .index-page-content{}
 .portfolio-page-content{
