@@ -41,21 +41,3 @@ $("form.form-site").validationEngine(
 	}
 );
 //retinajs();
-/*
-$("._pipc__slider-inner").owlCarousel({
-	margin: 0,
-	//loop: true,
-	items: 1,
-	nav: true,
-	navText: [],
-	dots: true
-});*/
-/*
-$("._pipc__slider-thumbnails").owlCarousel({
-	margin: 20,
-	//loop: true,
-	items: 7,
-	nav: false,
-	navText: [],
-	dots: false
-});*/

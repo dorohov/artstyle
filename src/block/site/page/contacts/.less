@@ -1,5 +1,5 @@
 .contacts-page-content{
-	@media @media-device{&.second{padding: 0}}
+	&.second{padding: 0}
 }
 .twoGIS-map__block{
 	position: relative;
@@ -14,7 +14,7 @@
 	@media @media-size-xs-l{height: 200px;}
 }
 ._cpc__contacts{
-	background-color: @white;
+	background-color: fadeout(@white, 10%);
 	font-family: @code;
 	font-size: @b-fs - 3px;
 	line-height: @b-lh - 4px;
@@ -22,7 +22,13 @@
 	letter-spacing: 0.7px;
 	@media @media-size-xs{
 		padding: 15px 0;
+		> div{
+			margin-bottom: 5px;
+		}
 	}
+	@media @media-size-sm{
+		background-color: fadeout(@white, 30%);
+	}		
 	@media @media-size-sm-p{		
 		position: absolute;
 		width: 100%;

@@ -11,6 +11,7 @@ var h_window = $(window).height(),
 	h_content_scroller = h_window - h_navbar - h_footer, 
 	h_content_scroller_sm = h_window - h_header - h_footer - 100, 
 	h_map = h_window - h_navbar - h_footer - h_heading, 
+	h_team = h_window - h_footer, 
 	h_content = h_window - h_navbar - h_footer;
 
 if (device.tablet()) {
@@ -27,6 +28,7 @@ if (device.mobile()) {
 	    interval : false
 	});	
 	$('.twoGIS-map__block').css("height", h_map);
+	//$('.about-team-page-content').css("height", h_team);
 }
 if (device.mobile() || device.tablet()) {
 	$('.navbar').addClass('navbar-fixed-top');
@@ -47,6 +49,7 @@ if (device.mobile() || device.tablet()) {
 	//$('.contacts-page-content').css("height", h_content_scroller);
 	//$('.content-block.second').css("top", h_header);
 	$(".scroller").mCustomScrollbar();	
+	$("._atpc__heading").prependTo($("._atpc__tab-pane-cols-right"));	
 }
 $(".navbar-fixed-top").autoHidingNavbar();
 $('.news-item__preview a').css("height", w_news_preview);

@@ -74,11 +74,50 @@
 		background: darken(@blue, 15%);
 	}
 }
+.btn-blue-opacity{
+	&, &:hover, &:focus{color: @white;}
+	background: fadeout(@blue, 20%);
+	&:hover{
+		background: fadeout(@blue, 0%);
+	}
+}
+.btn-blue-dark{
+	&, &:hover, &:focus{color: @white;}
+	background: @blue-dark;
+	&:hover{
+		background: darken(@blue-dark, 15%);
+	}
+}
 .btn-submit{
 	width: 100%;
 	padding: 10px 20px;   
 	font-family: @proxima;
 	font-size: @b-fs - 2px; //18px
+} 
+.btn-project{
+	font-family: @code;
+	text-transform: uppercase;
+    padding: 15px 30px;
+    letter-spacing: 1.5px;
+    @media @media-size-xs{    
+		font-size: @b-fs - 4px; //16px;
+		padding: 6px 30px;
+		display: block;
+		width: 100%;
+		text-align: center;
+    }
+} 
+.btn-reviews{
+	padding: 10px 50px;
+	font-family: @code;
+	font-size: @b-fs - 2px; //18px
+	line-height: @b-lh - 6px; //22px
+} 
+.btn-load{
+	padding: 10px 50px;
+	font-family: @code;
+	font-size: @b-fs - 2px; //18px
+	line-height: @b-lh - 6px; //22px
 } 
 .btn-dashed{
 	border-bottom: 1px dashed @blue;
