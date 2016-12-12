@@ -41,3 +41,22 @@ $("form.form-site").validationEngine(
 	}
 );
 //retinajs();
+$('._ipc__list').owlCarousel({
+	margin: 20,
+	items:8,	
+	navText: [],
+	//autoplay:true,
+	//smartSpeed: 500,
+	//autoplayTimeout:10000,
+	nav: false,
+	dots: false,
+	responsive: {
+		0:{
+			items:3,
+			dots: true,
+		},
+		767:{
+			items:8,
+		}
+	}
+});	

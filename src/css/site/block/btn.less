@@ -88,6 +88,14 @@
 		background: darken(@blue-dark, 15%);
 	}
 }
+.btn-outline-white{	
+	border: 2px solid @white; 
+	&:hover{
+		background:@white;
+		border-color:@blue;
+		//color: fadeout(@blue, 0%);
+	} 
+}
 .btn-submit{
 	width: 100%;
 	padding: 10px 20px;   
@@ -107,6 +115,44 @@
 		text-align: center;
     }
 } 
+.btn-action{
+	font-family: @far;
+	color: @white;
+	&::after{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		font-family: @icon;
+		content: @icon-arrow-right;
+	}
+	&.big{
+    	font-size: @b-fs + 4px;// 24px;
+		line-height: @b-lh + 16px; //44px;
+    	padding: 0px 30px;
+    	letter-spacing: .3px;
+    	@media @media-size-xs{
+    		font-size: @b-fs;// 20px;
+			line-height: @b-lh + 12px; //40px;
+    		padding: 0px 15px;
+    	}
+    	@media @media-size-sml{
+    		font-size: @b-fs;// 20px;
+			line-height: @b-lh + 12px; //40px;
+    		padding: 0px 15px;
+    	}
+	}
+	&.med{
+    	font-size: @b-fs;// 24px;
+		line-height: @b-lh + 10px; //38px;
+    	padding: 0px 15px;
+    	border-width: 1px;
+    	@media @media-size-lg{
+    		font-size: @b-fs - 4px;// 16px;
+			line-height: @b-lh + 6px; //34px;
+    		padding: 0 10px;
+    	}
+	}
+}
 .btn-reviews{
 	padding: 10px 50px;
 	font-family: @code;
@@ -127,13 +173,6 @@
 	}
 }
 /*
-.btn-outline-white{	
-	&, &:hover{border: 1px solid @white;} 
-	&:hover{
-		background:@white;
-		color: fadeout(@black, 30%);
-	} 
-}
 .btn-village{
 	position: absolute;
 	bottom: -100px;

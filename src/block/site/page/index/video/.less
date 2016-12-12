@@ -1,0 +1,98 @@
+.index-video-content{
+	margin-bottom: 70px;
+	@media @media-size-xs{margin-bottom: 35px;}
+	@media @media-size-sm{margin-bottom: 40px;}
+	@media @media-size-mdl{margin-bottom: 50px;}
+}
+._ivc__video{
+	height: 685px;
+	background-image: url("@{url-path-img}/temp/bg-video.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	@media @media-size-xs-p{height: 500px}
+	@media @media-size-xs-l{height: 350px}
+	@media @media-size-sm-l{height: 500px}
+	@media @media-size-mdl{height: 355px}
+	@media @media-size-xl{height: 495px}
+}
+._ivc__heading{
+	opacity: 0.75;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-family: @code;
+	color: @white;
+	font-size: @b-fs + 30px; //50px;
+	line-height: @b-lh + 36px;//60
+    letter-spacing: 1px;
+    margin: 0;
+    width: 100%;
+	@media @media-device{padding: 20px;}
+	@media @media-size-xs{
+		font-size: @b-fs + 10px; //30px;
+		line-height: @b-lh + 16px;//40
+    	letter-spacing: 0.5px;
+	}
+	@media @media-size-sm{
+		font-size: @b-fs + 20px; //40px;
+		line-height: @b-lh + 26px;//50
+    	letter-spacing: 0.5px;
+	}
+	span{ 
+		display: block;
+		font-family: @code-bold;
+		font-size: @b-fs + 60px; //80px;
+    	letter-spacing: 3px;
+		@media @media-size-xs{
+			font-size: @b-fs + 35px; //60px;
+			line-height: 55px;
+	    	letter-spacing: 2px;
+		}
+		@media @media-size-sm{
+			font-size: @b-fs + 50px; //70px;
+	    	letter-spacing: 2px;
+		}
+	}
+}
+._ivc__down{
+	position: absolute;
+	bottom: 80px;
+	left: 50%;		
+	transform-origin: center;		
+	animation-name: animated-btn;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	transition: @transition-site;
+	@media @media-size-mdl{bottom: 30px;}
+	&:before{
+		display: block;
+		content: @icon-down;
+		font-family: @icon;
+		color: @white;
+		border: 2px solid @white;
+		width: 64px;
+		line-height: 60px;
+		border-radius: 50%;
+		text-align: center;
+		font-size: 34px;
+		@media @media-size-xs{
+			width: 44px;
+			line-height: 40px;
+			font-size: 20px;
+		}
+		@media @media-size-mdl{
+			width: 54px;
+			line-height: 50px;
+			font-size: 24px;
+		}
+	}
+} 
+@keyframes animated-btn {	
+	from 	{transform: translate(-50%, 0);}
+	50%		{transform: translate(-50%, 3px);}
+	to 		{transform: translate(-50%, 0);}
+}

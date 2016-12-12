@@ -155,9 +155,11 @@
 			}
 		}
 	}
+}
+._ipc__list{
 	.owl-dots {
 		position: absolute;
-		bottom: 10px;
+		bottom: 0px;
 		display: flex;
 		align-items: center;
 		left: 0%;
@@ -172,12 +174,13 @@
 		margin: 0 10px 5px;
 		border-radius: 50%;
 		//border: 2px solid fadeout(@aquamarine-mod, 0%);
-		background: fadeout(@white, 20%);
+		background: fadeout(@blue, 20%);
 		transition: @transition-site;
 		&.active{
-			background: fadeout(@white, 0%);
+			background: fadeout(@blue, 0%);
 			width: 15px;
 			height: 15px;
 		}
 	}
+
 }
