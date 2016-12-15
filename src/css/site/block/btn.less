@@ -96,6 +96,28 @@
 		//color: fadeout(@blue, 0%);
 	} 
 }
+.btn-outline-blue{	
+	border: 1px solid @blue; 
+	color: @black;
+	&:hover{
+		background:@blue;
+		color: fadeout(@white, 0%);
+	} 
+}
+.btn-smi{
+	font-family: @proxima;
+	padding: 10px 25px;
+}
+.btn-services{
+	font-family: @proxima;
+	padding: 12px 25px;
+}
+.btn-vacancies{
+	font-family: @code-lc;
+	font-size: @b-fs - 6px; //14
+    line-height: @b-lh + 4px;// 32px;
+    padding: 0 25px;
+}
 .btn-submit{
 	width: 100%;
 	padding: 10px 20px;   
@@ -170,6 +192,37 @@
 	&:hover{
 		border-bottom-color: fadeout(@blue, 100%);
 		color: @blue;
+	}
+}
+
+.btn-play{
+	&::before{
+		display: block;
+		border: 3px solid @white;
+		border-radius: 50%;
+		font-family: @icon;
+		content: @icon-play;
+		color: fadeout(@white, 0%);
+		text-align: center;
+		padding-left: 10px;
+		transition: @transition-site;
+		@media @media-size-xs{
+			width: 68px;
+			line-height: 62px;
+			font-size: 30px;
+		}
+		@media @media-notsmart{
+			width: 128px;
+			line-height: 122px;
+			font-size: 46px;
+		}
+	}
+	._avpc__video:hover &,	
+	&:hover{
+		&::before{
+			color: fadeout(@blue, 0%);
+			background: @white;
+		}
 	}
 }
 /*

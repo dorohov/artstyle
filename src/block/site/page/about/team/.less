@@ -1,27 +1,20 @@
 .about-team-page-content{
+	@media @media-device{margin-bottom: 35px}
+	@media @media-screen{margin-bottom: 50px}
+    @media @media-size-xxl{margin-bottom: 95px;}
 	.container{position: relative;}
 }
 ._atpc__heading{
 	color: @blue;
-	font-size: @b-fs + 15px;
-    line-height: @b-lh + 16px;// 44px;
-	@media @media-device{
-		text-align: center;
-		margin-bottom: 35px;
-	}
-	@media @media-size-xs{
-		font-size: @b-fs + 5px;
-		line-height: @b-lh + 6px;// 34px;
-		margin-bottom: 25px;		
-	}
 	@media @media-screen{
 		position: absolute;    
-		top: 0px;
+		top: 40px;
 		left: 0px;
 		letter-spacing: 0.5px;
 		z-index: 5;
 		left: 45px;
 	}
+	@media @media-size-mdl{top: 0}
 	@media @media-size-xxl{left: 65px;}
 }
 ._atpc__row{
@@ -134,6 +127,7 @@
 	text-transform: uppercase;
 	font-size: @b-fs + 20px;
 	line-height: @b-lh + 20px;
+	margin-bottom: 15px;
 	br{display: none;}	
 	@media @media-size-xs{
 		font-size: @b-fs + 10px;
@@ -150,19 +144,15 @@
 	text-transform: uppercase;
 	font-size: @b-fs - 2px;
 	line-height: @b-lh - 6px;
-	letter-spacing: 5.1px;
+	letter-spacing: 1px;
 	margin-bottom: 15px;
-	@media @media-device{
-		letter-spacing: 2px;
-	}
+    border-left: 2px solid @blue;
+    padding-left: 5px;
 	@media @media-size-xs{
 		text-align: justify;
 	}
-	@media @media-size-mdl{
-		letter-spacing: 3.1px;
-	}
 	@media @media-size-xxl{
-		margin-bottom: 60px;
+		margin-bottom: 55px;
 	}
 }
 ._atpc__team-note{

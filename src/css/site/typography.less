@@ -9,6 +9,8 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0 0 10px;
 	font-weight: normal;
 }
+i, em{font-family: @far-italic; font-style: none;}
+b, strong{font-family: @far-bold; font-weight: normal}
 .heading-site{
 	color: @black;
 	font-family: @code; 
@@ -22,8 +24,6 @@ h1{
 	@media @media-size-sml	{font-size: @b-fs + 20px; line-height: @b-lh + 20px;} 	// 40/48
 }
 /*
-i, em{font-style: @din-ital;}
-b, strong{font-family: @din-bold}
 h2{
 	@media @media-screen	{font-size: @b-fs + 20px; line-height: @b-lh + 16px;} 	// 36/40
 	@media @media-size-xs	{font-size: @b-fs + 12px; line-height: @b-lh + 12px;} 	// 28/36
