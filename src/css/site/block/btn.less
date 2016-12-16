@@ -225,6 +225,34 @@
 		}
 	}
 }
+
+.btn-next{
+	position: relative;
+	padding-left: 20px;
+	padding-right: 40px;
+	&::after{
+		font-family: @icon;
+		color: @blue;
+		font-size: 8px;
+		content: @icon-next;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		transition: @transition-site;
+	}
+	&:hover{
+		&::after{
+			color: @white;
+		}
+	}
+}
+.btn-step{
+	font-family: @proxima;
+	font-size: @b-fs - 2px;
+	line-height: @b-lh + 14px;// 42px;
+    letter-spacing: 1px;
+}
 /*
 .btn-village{
 	position: absolute;
