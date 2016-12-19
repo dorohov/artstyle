@@ -79,7 +79,15 @@
 								<li class="divider"></li>
 								<li><a href="/blog.html">Блог</a></li>
 								<li class="divider"></li>
-								<li><a href="/about.html">О нас</a></li>
+								<li class="dropdown">
+									<a data-toggle="dropdown" class="" href="#">О нас</a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="/about.html" >Наша команда</a></li>
+										<li><a href="#" >О студии</a></li>
+										<li><a href="#" >Вакансии</a></li>
+										<li><a href="#" >СМИ о нас</a></li>
+									</ul>
+								</li>
 								<li class="divider"></li>
 								<li><a href="/contacts.html">Контакты</a></li>
 							</ul> 
@@ -104,14 +112,29 @@
 				<li class="filter-panel__list-item active">					
 					<a href="#" class="filter-panel__list-btn">Все проекты</a>
 				</li>
+				<div class="dropdown filter-panel__list-item filter-panel__list-dropdown">
+					<a data-toggle="dropdown" class="filter-panel__list-btn filter-panel__list-btn-dropdown" href="#">Жилые помещения</a>
+					<ul class="dropdown-menu filter-panel__list-dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="#flt" data-term-id=""></a></li>
+					</ul>
+				</div>
+				<div class="dropdown filter-panel__list-item filter-panel__list-dropdown">
+					<a data-toggle="dropdown" class="filter-panel__list-btn filter-panel__list-btn-dropdown" href="#">Коммерческие помещения</a>
+					<ul class="dropdown-menu filter-panel__list-dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="#flt" data-term-id="">Кафе</a></li>
+						<li><a href="#flt" data-term-id="">Магазины</a></li>
+						<li><a href="#flt" data-term-id="">Офисы</a></li>
+						<li><a href="#flt" data-term-id="">Торговые оборудование</a></li>
+					</ul>
+				</div>
+				<div class="dropdown filter-panel__list-item filter-panel__list-dropdown">
+					<a data-toggle="dropdown" class="filter-panel__list-btn filter-panel__list-btn-dropdown" href="#">Экстерьер</a>
+					<ul class="dropdown-menu filter-panel__list-dropdown-menu" role="menu" aria-labelledby="dLabel">
+						<li><a href="#flt" data-term-id=""></a></li>
+					</ul>
+				</div>
 				<li class="filter-panel__list-item">
-					<a href="#" class="filter-panel__list-btn">Жилые помещения</a>
-				</li>
-				<li class="filter-panel__list-item">
-					<a href="#"  class="filter-panel__list-btn">Коммерческие помещения</a>
-				</li>
-				<li class="filter-panel__list-item">
-					<a href="#"  class="filter-panel__list-btn">Экстерьер</a>
+					<a href="#"  class="filter-panel__list-btn">Архив</a>
 				</li>
 			</ul>
 		</div>
@@ -135,158 +158,287 @@
 	<div class="row _ppc__row">
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner">
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-105-68m2-2016g-mtsensk/1_5.jpg)">	 						
 	 					</div>
 	 				</div>
 		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект квартиры 105,68 м<sup>2</sup> 
-		 				</h3>
-		 				<div class="portfolio-item__year">Мценск, 2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект 
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year">Мценск, 2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-spalni-dlya-devochki-16-6m2-2016g-mezhevoy-9_120/1_1.jpg)">	 						
 	 					</div>
 	 				</div>
+
 		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект спальни для девочки 16,6м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 					<a href="/portfolio-item.html">
+		 					Дизайн-проект спальни для девочки 16,6м<sup>2</sup></a> 
+			 				</h3>
+			 				<div class="portfolio-item__year">2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-kuhni-gostinoy-17-1m2-2016g-g/11.jpg)">	 						
 	 					</div>
 	 				</div>
 		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект кухни-гостиной 17,1 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
-		 			</div>
-	 			</a>
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект кухни-гостиной 17,1&nbsp;м<sup>2</sup> 
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year">2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
+		 			</div>		 			
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-93-5m2-2016g-andrianova-7/002.jpg)">	 						
 	 					</div>
 	 				</div>
 		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект квартиры 93,5 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект квартиры 93,5&nbsp;м<sup>2</sup> 
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year">2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-46m2-2016g-tula/1_4.jpg)">	 						
 	 					</div>
 	 				</div>
 		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект квартиры 46 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">Тула, 2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
-	 				</div>
-	 			</a>
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект квартиры 46&nbsp;м<sup>2</sup>
+		 						</a>
+			 				</h3>
+		 					<div class="portfolio-item__year">Тула, 2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a> 
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
+		 			</div>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner">
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-gostinoy-stolovoy-28m2-perkova-2016g/1_1.jpg)">	 						
 	 					</div>
 	 				</div>
 		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект гостиной-столовой 28 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект гостиной-столовой 28&nbsp;м<sup>2</sup>
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year">2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-basseyna-70-58m2-2016g-gorki/11.jpg)">	 						
 	 					</div>
 	 				</div>
-		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект бассейна 70,58 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">Горки, 2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+	 				<div class="portfolio-item__note">
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект бассейна 70,58&nbsp;м<sup>2</sup>
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year">Горки, 2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-spalni_28-66-m2_2016g/1.jpg)">	 						
 	 					</div>
 	 				</div>
-		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект спальни 28,66 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+	 				<div class="portfolio-item__note">
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект спальни 28,66&nbsp;м<sup>2</sup>
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year"> 2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
 	 	<div class="cols _ppc__cols">
 	 		<div class="portfolio-item _czr__block-hover">
-	 			<a class="portfolio-item__inner" href="/portfolio-item.html" >
+	 			<div class="portfolio-item__inner" >
 	 				<div class="portfolio-item__preview">
 	 					<div class="portfolio-item__preview-inner" style="background-image: url(http://intdez.ru/wp-content/gallery/dizayn-proekt-1-y-kvartiryi_2016g_51-29-m2/1.jpg)">	 						
 	 					</div>
 	 				</div>
-		 			<div class="portfolio-item__note">
-		 				<h3 class="portfolio-item__heading">
-		 					Дизайн-проект 1-й квартиры 51,29 м<sup>2</sup>
-		 				</h3>
-		 				<div class="portfolio-item__year">2016 <span>год</span></div>
-		 				<div class="portfolio-item__btn"></div>
+	 				<div class="portfolio-item__note">
+		 				<div class="portfolio-item__note-top">
+		 					<h3 class="portfolio-item__heading">
+		 						<a href="/portfolio-item.html">
+		 							Дизайн-проект 1-й квартиры 51,29&nbsp;м<sup>2</sup>
+		 						</a>
+			 				</h3>
+			 				<div class="portfolio-item__year"> 2016 <span>год</span></div>
+			 				<div class="portfolio-item__tags"> 
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue-dark">Кухня-гостиная</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-green-light">Туалет</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-blue">Детские</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-orange-light">Коридор</a>
+			 					<a href="/portfolio-tags.html" class="tags-item bg-grey">Балкон</a>
+			 				</div>
+		 				</div>	
+		 				<div class="portfolio-item__note-bottom">
+		 					<a href="#" class="btn-site btn-3d">3D</a>
+		 					<a href="/portfolio-item.html" class="btn-site btn-project-min" >Реализация</a>
+		 				</div>	 				
 		 			</div>
-	 			</a>
+	 			</div>
 	 		</div>
 	 	</div>
-	 </div>
+	</div>
+	<div class="_ppc__btn-block">
+		<button type="button" class="btn-site btn-more btn-outline-blue">Загрузить больше работ</button>
+	</div>
 	<div class="tags-panel"> 
 	<div class="row tags-panel__row">
 		<div class="cols tags-panel__cols-heading">

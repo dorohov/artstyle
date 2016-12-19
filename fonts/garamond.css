@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Garamond";
+    src: url("garamond.eot"); /* IE9 */
+    src: url("garamond.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("garamond.woff") format("woff"), /* chrome, firefox */
+    url("garamond.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("garamond.svg#Garamond") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

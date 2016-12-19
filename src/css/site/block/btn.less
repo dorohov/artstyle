@@ -137,6 +137,37 @@
 		text-align: center;
     }
 } 
+.btn-3d{
+	border: 1px solid fadeout(@white, 20%);
+	font-family: @proxima;
+	font-size: @b-fs - 6px;
+	padding: 0 50px;
+	&, &:focus{
+		background-color: fadeout(@white, 100%);
+		color: @white; 
+	}
+	&:hover{
+		background-color: fadeout(@white, 20%);
+		color: #2c2c2c;
+	}
+}
+.btn-project-min{	
+	border: 1px solid fadeout(@white, 20%);
+	font-family: @proxima;
+	font-size: @b-fs - 6px;
+	background-color: fadeout(@white, 20%);
+	color: #2c2c2c;
+	padding: 0 20px;
+	&, &:focus{
+		background-color: fadeout(@white, 20%);
+		color: #2c2c2c;
+	}
+	&:hover{
+		background-color: fadeout(@white, 0%);
+		color: #2c2c2c;
+		border-color: @white;
+	}
+}
 .btn-action{
 	font-family: @far;
 	color: @white;
@@ -186,7 +217,26 @@
 	font-family: @code;
 	font-size: @b-fs - 2px; //18px
 	line-height: @b-lh - 6px; //22px
-} 
+}  
+.btn-more{
+    padding: 13px 45px 13px 15px;
+    letter-spacing: 1px;
+	font-family: @proxima;
+	font-size: @b-fs - 2px; //18px
+	line-height: @b-lh - 6px; //22px
+	position: relative;
+	color: @blue;
+	&::after{
+		font-family: @icon;
+		content: @icon-down;
+		position: absolute;
+		top: 50%;
+		right: 23px;
+		transform: translateY(-50%);
+		color: @blue;
+		font-size: 8px;
+	}
+}  
 .btn-dashed{
 	border-bottom: 1px dashed @blue;
 	&:hover{
