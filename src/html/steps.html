@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
+	</head>
+	<body>	
+		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]] 					
+		<div class="container">
+			[[azbntple tpl="/src/block/site/page/steps/.html" class="steps-page-content" prefix="_stpc__"]]
+		</div>
+		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
+				
+		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+
+		<link rel="stylesheet" type="text/css" href="/css/lightgallery.css" />
+
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+				$('.lightgallery').lightGallery({
+				    thumbnail:true
+				}); 
+			})
+		</script>
+		<!-- light Gallery -->
+		<script src="/plugins/lightGallery/js/lightgallery.js"></script>
+		<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
+		<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
+	</body>
+</html> 
