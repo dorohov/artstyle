@@ -1,12 +1,12 @@
 var topPos = $(document).scrollTop();		
-var snb = $('.navbar-site.index');
-if(snb.hasClass('scroll-sidebar')) {
+var snb = $('.navbar-site.scroll');
+if(snb.hasClass('scroll-navbar')) {
 	if(topPos < 500) {
-		snb.removeClass('scroll-sidebar');
+		snb.removeClass('scroll-navbar');
 	} 
 } else {
 	if(topPos > 500) {
-		snb.addClass('scroll-sidebar');
+		snb.addClass('scroll-navbar');
 	}
 }	
 if(snb.hasClass('opacity')) {

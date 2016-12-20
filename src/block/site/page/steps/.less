@@ -121,7 +121,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	@media @media-size-xs{padding: 10px 10px 0;}
-	@media @media-notsmart{padding: 20px 20px 0;}
+	@media @media-notsmart{padding: 20px 20px 10px;}
 	&.item1{
 		background-image: url("@{url-path-img}/steps/bg-item1.jpg");
 	}
@@ -140,30 +140,21 @@
 }
 ._stpc__gallery-row{
 	flex-wrap: wrap;
-	@media @media-size-xs{
-		margin-right: -5px;
-		margin-left: -5px;
-	}
-	@media @media-notsmart{
-		margin-right: -10px;
-		margin-left: -10px;
-	}
+	margin-right: -5px;
+	margin-left: -5px;
 }
 ._stpc__gallery-cols{
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
 	@media @media-size-xs{
 		width: 50%;
-		padding-right: 5px;
-		padding-left: 5px;
-		margin-bottom: 10px;
 	}
 	@media @media-size-xs-l{
 		width: 33.3333%;
 	}
 	@media @media-notsmart{
 		width: 25%;		
-		padding-right: 10px;
-		padding-left: 10px;
-		margin-bottom: 20px;
 	}
 }
 ._stpc__steps-text-block{

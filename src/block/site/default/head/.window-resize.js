@@ -50,6 +50,7 @@ if (device.mobile() || device.tablet()) {
 	//$('.content-block.second').css("top", h_header);
 	$(".scroller").mCustomScrollbar();	
 	$("._atpc__heading").prependTo($("._atpc__tab-pane-cols-right"));	
+	$(".error-page-content").css("height", h_content_scroller);	
 }
 $(".navbar-fixed-top").autoHidingNavbar();
 $('.news-item__preview a').css("height", w_news_preview);
