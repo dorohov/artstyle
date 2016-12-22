@@ -1,20 +1,24 @@
 <form action="#" class="form-site {{class}}"> 
-	<h3 class="form-block__heading"></h3>
-	<div class="form-block__note"></div>
-	<div class="row _frms__row">
-		<div class="cols _frms__cols">
-			<div class="_frms__input icon icon-user">
-				<input type="text" class="_frms__form-control form-control validate[required]" id="f[name]" placeholder="Ваше имя">
+	<div class="form-site__note ">{{note}}</div>
+	<div class="row {{prefix-page}}row">
+		<div class="cols {{prefix-page}}cols">
+			<div class="{{prefix-page}}input icon icon-user">
+				<input type="text" class="{{prefix}}form-control form-control validate[required]" id="f[name]" placeholder="Ваше имя">
 			</div>	
 		</div>
-		<div class="cols _frms__cols">
-			<div class="_frms__input icon icon-tel">
-				<input type="tel" class="_frms__form-control form-control validate[required,custom[phone]]"  id="f[phone]" placeholder="Ваш телефон">
+		<div class="cols {{prefix-page}}cols">
+			<div class="{{prefix-page}}input icon icon-tel">
+				<input type="email" class="{{prefix}}form-control form-control validate[required,custom[email]]" id="f[email]" placeholder="Ваш e-mail">
 			</div>	
 		</div>
-		<div class="cols _frms__cols">
-			<div class="_frms__input _msc__form-btn">
-				<button type="submit" class="btn-site btn-yellow-light btn-submit">Отправить</button>
+		<div class="cols {{prefix-page}}cols">
+			<div class="{{prefix-page}}input icon icon-tel">
+				<textarea id="f[note]" class="{{prefix}}form-control form-control validate[required]" placeholder="{{placeholder_textaria}}"></textarea>
+			</div>	
+		</div>
+		<div class="cols {{prefix-page}}cols">
+			<div class="{{prefix-page}}input {{prefix-page}}btn">
+				<button type="submit" class="btn-site btn-blue btn-submit">{{btn_name}}</button>
 			</div>	
 		</div>
 	</div>

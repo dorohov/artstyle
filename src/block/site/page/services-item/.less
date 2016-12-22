@@ -1,2 +1,139 @@
 .services-item-page-content{}
+._sipc__row{}
+._sipc__note-cols{
+	font-size: @b-fs - 2px;
+	line-height: @b-lh - 6px;
+	@media @media-device{
+		margin-bottom: 30px;
+	}
+	@media @media-screen{
+		padding-top: 40px;
+		margin-bottom: 40px;
+	}
+	@media @media-size-xxl{
+		margin-bottom: 100px;
+	}
+	h4{
+		&::after{
+			content: '';
+			display: block;
+			width: 50px;
+			height: 1px;
+			background: @blue;
+			margin-top: 15px;
+		}
+	}
+}
+._sipc__cols{
+	margin-bottom: 20px;
+	@media @media-size-xs{width: 100%;}
+	@media @media-notsmart{width: 33.333%}
+}
+._sipc__note{
+    border-bottom: 1px solid #999;
+	@media @media-device{
+		padding-bottom: 25px;
+		margin-bottom: 35px;
+	}
+	@media @media-screen{
+		padding-bottom: 55px;
+		margin-bottom: 85px;
+	}
+	@media @media-size-xxl{
+		padding-bottom: 105px;
+		margin-bottom: 135px;
+	}
+	blockquote{
+		margin-top: 30px;
+	}
+}
+._sipc__list{
+	line-height: @b-lh - 4px;
+	@media @media-device{
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	@media @media-screen{
+		margin-top: 45px;
+		margin-bottom: 45px;
+	}
+	@media @media-size-xxl{
+		margin-top: 65px;
+		margin-bottom: 65px;
+	}
+}
+._sipc__list-item{
+	*{margin-bottom: 10px;}
+	&:last-child{margin-bottom: 0}
+	@media @media-device{
+		margin-bottom: 15px;
+	}
+	@media @media-screen{
+		margin-bottom: 20px;
+	}
+	@media @media-size-xxl{
+		margin-bottom: 40px;
+	}
+	> div{
+		@media @media-size-xs{
+			margin-left: 33px;
+		}
+		@media @media-notsmart{
+			margin-left: 40px;
+		}
+	}
+
+}
+._sipc__more-services{
+	@media @media-device{
+		padding-top: 25px;
+		margin-bottom: 25px;
+	}
+	@media @media-screen{
+		padding-top: 35px;
+		margin-bottom: 35px;
+	}
+	@media @media-size-xxl{
+		padding-top: 55px;
+		margin-bottom: 45px;
+	}
+}
+._sipc__more-item{
+	&:last-child{margin-bottom: 0px}
+	@media @media-size-xs{
+		margin-bottom: 25px;
+	}
+	@media @media-notsmart{
+		margin-bottom: 40px;
+	}
+}
+._sipc__more-row{
+	align-items: flex-end;
+}
+._sipc__more-cols-left{
+	@media @media-size-xs{width: 100%; margin-bottom: 10px;}
+	@media @media-notsmart{width: 75%;}
+}
+._sipc__more-cols-right{
+	@media @media-size-xs{width: 100%;}
+	@media @media-notsmart{
+		width: 25%;
+		text-align: right;
+	}
+}
+._sipc__more-heading{
+	position: relative;
+	padding-left: 40px;
+	&::before{
+		content: '';
+		display: block;
+		width: 20px;
+		height: 3px;
+		background: @blue;
+		position: absolute;
+		left: 0px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
 ._sipc__{}

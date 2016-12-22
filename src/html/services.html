@@ -3,14 +3,18 @@
 	<head>
 		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
 	</head>
-	<body>	 
-
-		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site scroll" ]] 
-							
-		[[azbntple tpl="/src/block/site/page/services/.html" class="services-page-content" prefix="_spc__" prefix-services="_spc__"]] 
+	<body>
+		<div class="site-wrap">	
+			[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site scroll" ]]
+			<div class="content-wrap">								
+				[[azbntple tpl="/src/block/site/page/services/.html" class="services-page-content" prefix="_spc__" prefix-services="_spc__"]] 
 		
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
+				[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
+			</div>
+			[[azbntple tpl="/src/block/site/default/modals/order.html" class="modal-site" prefix="_rms__" prefix-page="_rms__"]]
 				
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+			[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+			<script src="/js/retina.min.js" ></script>
+		</div>
 	</body>
 </html> 

@@ -60,3 +60,8 @@ $('._ipc__list').owlCarousel({
 		}
 	}
 });	
+$('.getModal').click(function(){
+	$('#modal-vacancies').modal('hide');
+	setTimeout(function() {$('#modal-vacancies-order').modal('show');}, 500)
+	return false;
+});

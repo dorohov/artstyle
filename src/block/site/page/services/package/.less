@@ -41,7 +41,7 @@
 	}
 	@media @media-size-sm{
 		width: 50%;
-		height: 400px;		
+		height: 200px;		
 	}
 	@media @media-screen{
 		width: 100%;
@@ -99,6 +99,9 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			@media @media-size-sm{				
+				font-size: 3.5em;
+			}
 		}
 		&._standart{
 			&::before{content: "s";}

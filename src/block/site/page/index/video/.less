@@ -61,13 +61,18 @@
 	position: absolute;
 	bottom: 80px;
 	left: 50%;		
-	transform-origin: center;		
-	animation-name: animated-btn;
-	animation-duration: 1s;
-	animation-fill-mode: both;
-	animation-iteration-count: infinite;
 	transition: @transition-site;
 	@media @media-size-mdl{bottom: 30px;}
+	@media @media-device{
+		transform: translateX(-50%);
+	}
+	@media @media-screen{
+		transform-origin: center;		
+		animation-name: animated-btn;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;		
+	}
 	&:before{
 		display: block;
 		content: @icon-down;

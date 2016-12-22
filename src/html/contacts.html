@@ -5,15 +5,19 @@
 	</head>
 	<body>	 
 
-		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]] 
+		<div class="site-wrap">	
+			[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]] 	
+			<div class="content-wrap">
+				[[azbntple tpl="/src/block/site/page/contacts/.html" class="contacts-page-content" prefix="_cpc__"]] 
 
-		[[azbntple tpl="/src/block/site/page/contacts/.html" class="contacts-page-content" prefix="_cpc__"]] 
+				[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
+			</div>				
+			[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+			[[azbntple tpl="/src/block/site/default/modals/question.html" class="modal-site" prefix="_rms__" prefix-page="_rms__"]]
 
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
-				
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-
-		<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-		<script src="/js/document-ready-2gis-map.js"></script>
+			<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+			<script src="/js/document-ready-2gis-map.js"></script>
+			<script src="/js/retina.min.js" ></script>
+		</div>
 	</body>
 </html> 

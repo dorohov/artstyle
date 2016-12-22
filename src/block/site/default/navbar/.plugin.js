@@ -7,7 +7,11 @@
 		});
 		$("[data-collapse-nav]").click(function() {
 			var toggle_el = $(this).data("collapse-nav"); 
-			$(toggle_el).toggleClass("open-scroll-sidebar");
+			$(toggle_el).toggleClass("open");
+		});
+		$("[data-body]").click(function() {
+			var toggle_el = $(this).data("body"); 
+			$(toggle_el).toggleClass("open-navbar");
 		});
 
 	});

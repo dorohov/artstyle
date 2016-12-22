@@ -4,59 +4,61 @@
 		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
 	</head>
 	<body>	 
-
-		[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]] 					
-		<div class="container">
-			[[azbntple tpl="/src/block/site/page/portfolio-tags/.html" class="portfolio-item-page-content" prefix="_ptpc__"]] 
-		</div>
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
-				
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+		<div class="site-wrap">	
+			[[azbntple tpl="/src/block/site/default/navbar/.html" class="navbar-site" ]]
+			<div class="content-wrap">						
+				<div class="container">
+					[[azbntple tpl="/src/block/site/page/portfolio-tags/.html" class="portfolio-item-page-content" prefix="_ptpc__"]] 
+				</div>
+				[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
+			</div>	
+			[[azbntple tpl="/src/block/site/default/head/script.html" ]]
 		
-		<link rel="stylesheet" type="text/css" href="/css/lightslider.css" />
-		<link rel="stylesheet" type="text/css" href="/css/lightgallery.css" />
+			<link rel="stylesheet" type="text/css" href="/css/lightslider.css" />
+			<link rel="stylesheet" type="text/css" href="/css/lightgallery.css" />
 
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('#imageGallery').lightSlider({
-					gallery:true,
-					item:1,
-					//loop:true,
-					thumbItem:8,
-					slideMargin:0,
-					thumbMargin: 20,
-					galleryMargin: 0, 
-					enableDrag: false,
-					currentPagerPosition:'left',
-					/*onSliderLoad: function(el) {
-						el.lightGallery({
-							selector: '#imageGallery .lslide'
-						});
-					}, 	  */
-					responsive : [
-			            {
-			                breakpoint:767,
-			                settings: {
-								thumbItem:4
-		                  	}
-			            },
-			            {
-			                breakpoint:475,
-			                settings: {
-								thumbItem:2
-		                  	}
-			            }
-			        ]
-				});  
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#imageGallery').lightSlider({
+						gallery:true,
+						item:1,
+						//loop:true,
+						thumbItem:8,
+						slideMargin:0,
+						thumbMargin: 20,
+						galleryMargin: 0, 
+						enableDrag: false,
+						currentPagerPosition:'left',
+						/*onSliderLoad: function(el) {
+							el.lightGallery({
+								selector: '#imageGallery .lslide'
+							});
+						}, 	  */
+						responsive : [
+				            {
+				                breakpoint:767,
+				                settings: {
+									thumbItem:4
+			                  	}
+				            },
+				            {
+				                breakpoint:475,
+				                settings: {
+									thumbItem:2
+			                  	}
+				            }
+				        ]
+					});  
 
-			});
-		</script>
-		<!-- light Slider -->
-		<script src="/plugins/lightSlider/js/lightslider.min.js"></script>
-		<!-- light Gallery -->
-		<script src="/plugins/lightGallery/js/lightgallery.js"></script>
-		<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
-		<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
+				});
+			</script>
+			<!-- light Slider -->
+			<script src="/plugins/lightSlider/js/lightslider.min.js"></script>
+			<!-- light Gallery -->
+			<script src="/plugins/lightGallery/js/lightgallery.js"></script>
+			<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
+			<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
+			<script src="/js/retina.min.js" ></script>
+		</div>
 	</body>
 </html> 

@@ -6,7 +6,7 @@
 	@media @media-size-xs{padding: 10px 20px;}
 	@media @media-size-sm{padding: 10px 25px;}
 	@media @media-size-mdl{padding: 10px 40px;}
-	@media @media-notsmart{
+	@media @media-screen{
 		&.fixed{
 			position: fixed;
 			left: 0;
@@ -23,12 +23,12 @@
 			opacity: 1;
 			transform: translateY(0%);
 		}
-	}
+	}/*
 	@media @media-size-sm{
 		&.fixed{
 			top: 100px;
 		}
-	}
+	}*/
 	@media @media-screen{
 		&.fixed{
 			top: 0px;
@@ -40,6 +40,7 @@
 }
 .filter-panel__cols-list{
 	@media @media-device{width: 100%; margin-bottom: 15px; text-align: center;}
+	@media @media-size-xs-p{text-align: left; margin-bottom: 0}
 	@media @media-size-sm-l{width: 80%; margin-bottom: 0}
 	@media @media-screen{width: 80%;}
 }
@@ -58,6 +59,9 @@
 .filter-panel__list-item{
 	margin-right: 30px;
 	@media @media-device{margin-right: 15px;}
+	@media @media-size-xs-p{margin: 0 0 10px 0; width: 100%;
+		&:last-child{margin-bottom: 5px}
+	}
 	@media @media-size-mdl{margin-right: 15px;}
 }
 .filter-panel__list-btn{
@@ -100,6 +104,9 @@
 	.dropdown.open &{
 		&::after{content: @icon-up;}	
 	}
+	@media @media-size-xs{
+		margin: 0;
+	}
 }
 .filter-panel__list-dropdown-menu{
 	border:0;
@@ -107,6 +114,14 @@
 	margin-top: 10px;
 	background: @b-filter-panel-bg;
 	box-shadow: none;
+	@media @media-size-xs{
+		margin: 0;
+		background: @white; 
+	}
+	@media @media-size-sm-p{
+		margin: 0;
+		background: @white; 
+	}
 	> li{
 		>a{
 			font-family: @b-filter-item-ff;
@@ -115,12 +130,24 @@
 			&,&:hover,&:focus{color: @b-filter-item-color;}	
 			&:hover{
 				background: fadeout(@b-filter-item-bg-hover, 20%);
+			}
+			@media @media-size-xs{
+				&,&:hover,&:focus{color: @b-filter-item-bg-hover;}	 
+			}
+			@media @media-size-sm-p{
+				&,&:hover,&:focus{color: @b-filter-item-bg-hover;}	 
 			}	
 		}
 		&.active{
 			> a{
 				background: @b-filter-item-bg-hover;
-				cursor: default;
+				cursor: default;				
+				@media @media-size-xs{
+					&,&:hover,&:focus{color: @white;}	 
+				}			
+				@media @media-size-sm-p{
+					&,&:hover,&:focus{color: @white;}	 
+				}
 			}
 		}
 	}

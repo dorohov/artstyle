@@ -4,13 +4,17 @@
 		[[azbntple tpl="/src/block/site/default/head/.html" ]] 
 	</head>
 	<body>	 
-
-		[[azbntple tpl="/src/block/site/default/navbar/about.html" class="navbar-site scroll" ]] 					
-		
-		[[azbntple tpl="/src/block/site/page/about/.html" class="about-page-content" prefix="_apc__" prefix-about="_apc__"]] 		
-		
-		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
-				
-		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+		<div class="site-wrap">	
+			[[azbntple tpl="/src/block/site/default/navbar/about.html" class="navbar-site scroll" ]] 	
+			<div class="content-wrap">
+				[[azbntple tpl="/src/block/site/page/about/.html" class="about-page-content" prefix="_apc__" prefix-about="_apc__"]]
+				[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]] 
+			</div>
+			[[azbntple tpl="/src/block/site/default/modals/vacancies.html" class="modal-site" prefix="_vms__" prefix-page="_vms__"]]
+			[[azbntple tpl="/src/block/site/default/modals/vacancies-order.html" class="modal-site" prefix="_rms__" prefix-page="_rms__"]]
+					
+			[[azbntple tpl="/src/block/site/default/head/script.html" ]]
+			<script src="/js/retina.min.js" ></script>
+		</div>
 	</body>
 </html> 

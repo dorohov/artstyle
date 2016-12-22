@@ -11,9 +11,6 @@
 	a{
 		&, &:hover, &:focus{color: @b-footer-color;} 
 	}
-	@media @media-size-xs{
-		text-align: center;
-	}
 	@media @media-screen{
 	}
 	.container{
@@ -29,10 +26,10 @@
 		}
 	}
 	@media @media-size-xs{
-		&.include-navbar-blog{padding-right: 40px;}
+		&.include-navbar-blog{padding-bottom: 20px;}
 	}
 	@media @media-size-sm{
-		&.include-navbar-blog{padding-right: 60px;}
+		&.include-navbar-blog{padding-bottom: 30px;}
 	}
 }
 ._fs__row{
@@ -48,6 +45,7 @@
 	line-height: @b-footer-lh - 5px; //16
 	width: 30%;
 	@media @media-device{width: 100%; text-align: center; margin-bottom: 20px;}
+	@media @media-size-xs{text-align: left}
 	@media @media-size-mdl{width: 20%;}
 	@media @media-size-xl{width: 25%;}
 }

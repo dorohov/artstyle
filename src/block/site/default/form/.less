@@ -1,5 +1,12 @@
 .form-site{
 }
+.form-site__note{
+	color: #9c9c9c;
+	font-family: @far-italic;
+	line-height: @b-lh - 4px;
+	text-align: center;
+	margin-bottom: 15px;
+}
 ._frs__input{
 	display: block;
 	font-weight: normal;
@@ -61,16 +68,15 @@
 	}
 }
 textarea._frs__form-control{
-	height: 200px;
-	max-height: 200px;
+	height: 180px;
+	max-height: 180px;
 }
 ._frs__row{
 	@media @media-device{flex-wrap: wrap; justify-content: center;}
 }
 ._frs__cols{
 	width: 33.3333%;
-	@media @media-size-xs-p{width: 100%;}
-	@media @media-size-xs-l{width: 50%;}
+	@media @media-size-xs{width: 100%;}
 	@media @media-size-sm-p{width: 50%;}
 }
 ._frs__btn{

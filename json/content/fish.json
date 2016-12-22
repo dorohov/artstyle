@@ -9,12 +9,13 @@
 	"soc":{
 		"vk":"https://vk.com/public57147545",
 		"vk_name":"vk.com/public57147545",
-		"fb":"https://www.facebook.com/groups/300842956941501/",
+		"fb":"#",
 		"fb_name":"facebook.com/artstyle",
-		"pint":"",
-		"pint_name":"",
+		"pint":"#",
+		"pint_name":"#",
 		"inst":"https://www.instagram.com/artstyle/",
 		"inst_name":"instagram.com/artstyle"
 	},
-	"url-path-img":""
+	"url-path-img":"",
+	"url-path-favicon":"/favicon"
 }

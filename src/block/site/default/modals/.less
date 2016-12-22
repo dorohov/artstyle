@@ -1,0 +1,157 @@
+ //
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+	overflow: hidden; 
+}
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	&.fade .modal-dialog {
+		.translate(0, 0%);
+		.transition-transform(~"0.5s");
+	}
+	&.in .modal-dialog { .translate(0, 10%) }
+	@media @media-size-xs{
+		&.fade .modal-dialog {.translate(-100%, 0);}
+		&.in .modal-dialog { .translate(0, 0%) }
+		&.fade ._msm__dialog {.translate(-100%, 0%)}
+		&.in ._msm__dialog {.translate(0, 0%)}
+	}
+	@media @media-size-lg {
+		&.in .modal-dialog { .translate(0, 4%) }
+	}
+	@media @media-size-xxl{
+		&.in .modal-dialog { .translate(0, 30%) }
+	}
+	@media @media-size-sm{		
+		&.fade ._msm__dialog {.translate(100%, 0%)}
+		&.in ._msm__dialog {.translate(0, 0%)}
+	}
+	@media @media-screen{		
+		&.fade ._msm__dialog {.translate(0, 100%)}
+		&.in ._vms__dialog {.translate(0, 10%)}
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+	@media @media-notsmart{overflow-y: hidden;}
+	
+}
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal-background;
+	background-color: @modal-backdrop-bg;
+	// Fade for backdrop
+	&.fade { .opacity(0); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 0px;}  
+	@media @media-size-sm 	{margin: 10px auto;}  
+	@media @media-screen 	{margin: 0px auto;}  
+	//background: url(../img/maket/modal.jpg) no-repeat -10px -20px;
+}
+.modal-content {
+	position: relative;
+	outline: 0;
+}
+.modal-body {
+	position: relative;
+	padding: 30px 60px;
+	background: @white;
+	color: @black;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	//opacity: 0.7;
+	//font-size: @b-fs - 3px; //15px;
+	//line-height: @b-lh - 6px; //22px;
+	@media @media-size-xs{padding: 25px;}	
+	//@media @media-size-sm{padding: 30px;}
+}
+
+// Title text within header
+.modal-heading{}
+.modal-title {
+	//font-family: @din-bold;
+	margin-bottom: 10px;
+	@media @media-size-xs {text-align: center}
+	@media @media-device	{font-size: @b-fs + 8px; line-height: @b-lh + 10px; } 	// 24/30
+	@media @media-screen	{font-size: @b-fs + 15px; line-height: @b-lh + 15px;} 	// 36/42
+}
+.modal-btn-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    //transform: translateY(-50%);
+	@media @media-size-xs-p{
+		top: 20px;
+		right: 50%; 
+		transform: translateX(50%);
+	}
+	@media @media-size-xs-l{
+		top: 20px;
+		right: 20px;
+	}
+}
+.modal-block{
+    @media @media-size-xs-p {padding-top: 50px;}
+}
+.modal-note{
+	text-align: center; 
+	margin-bottom: 30px;
+}
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+//====== modal reviews ======//
+//====== modal prefix ._rms__ ======//
+._rms__dialog{
+	@media @media-notsmart{width: 500px;}
+}
+._rms__title{	
+	text-align: center;
+}
+._rms__row{
+	flex-wrap: wrap;
+}
+._rms__cols{
+	width: 100%;
+}
+._rms__input{
+	margin-bottom: 20px;
+}
+._rms__btn{
+	max-width: 250px;
+	margin: 0 auto;
+}

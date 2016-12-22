@@ -23,31 +23,100 @@ h1{
 	@media @media-size-xs	{font-size: @b-fs + 10px; line-height: @b-lh + 10px;} 	// 30/38
 	@media @media-size-sml	{font-size: @b-fs + 20px; line-height: @b-lh + 20px;} 	// 40/48
 }
-/*
 h2{
-	@media @media-screen	{font-size: @b-fs + 20px; line-height: @b-lh + 16px;} 	// 36/40
-	@media @media-size-xs	{font-size: @b-fs + 12px; line-height: @b-lh + 12px;} 	// 28/36
-	@media @media-size-sml	{font-size: @b-fs + 16px; line-height: @b-lh + 16px;} 	// 32/40
+	@media @media-screen	{font-size: @b-fs + 15px; line-height: @b-lh + 12px; letter-spacing: 1.5px;} 	// 35/40
+	@media @media-device	{letter-spacing: 1px;} 
+	@media @media-size-xs	{font-size: @b-fs + 8px; line-height: @b-lh + 5px;} 	
+	@media @media-size-sml	{font-size: @b-fs + 10px; line-height: @b-lh + 7px;} 
+	color: @blue;	
 }
-h3{
-	@media @media-screen	{font-size: @b-fs + 14px; line-height: @b-lh + 14px;} 	// 30/38
-	@media @media-size-xs	{font-size: @b-fs + 6px; line-height: @b-lh + 6px;} 	// 22/30
-	@media @media-size-sml	{font-size: @b-fs + 10px; line-height: @b-lh + 10px;} 	// 26/34
-}
-h4{
-	@media @media-screen	{font-size: @b-fs + 8px; line-height: @b-lh + 6px;} 	// 26/34
-	@media @media-size-xs	{font-size: @b-fs; line-height: @b-lh - 2px;} 				// 16/22
-	@media @media-size-sml	{font-size: @b-fs + 4px; line-height: @b-lh + 2px;} 	// 20/26
-	@media @media-size-xl	{font-size: @b-fs + 6px; line-height: @b-lh + 6px;} 	// 22/30
+h3, h4{
+
+	@media @media-screen	{font-size: @b-fs + 4px; line-height: @b-lh + 2px; letter-spacing: 1px;} 	// 24/30
+	@media @media-device	{letter-spacing: 0.5px;} 
+	@media @media-size-xs	{font-size: @b-fs + 0px; line-height: @b-lh - 2px;} 
+	@media @media-size-sml	{font-size: @b-fs + 2px; line-height: @b-lh + 0px;} 
 }
 h5{
-	@media @media-notsmart	{font-size: @b-fs; line-height: @b-lh;} 				// 16/24
-	@media @media-size-xs	{font-size: @b-fs - 2px; line-height: @b-lh - 2px;} 	// 14/22
+	@media @media-notsmart	{font-size: @b-fs; line-height: @b-lh - 2px;} 				// 20/26
+	@media @media-size-xs	{font-size: @b-fs - 2px; line-height: @b-lh - 4px;} 	
 }
 h6{
-	@media @media-notsmart	{font-size: @b-fs - 2px; line-height: @b-lh - 2px;} 	// 14/22
-	@media @media-size-xs	{font-size: @b-fs - 3px; line-height: @b-lh - 3px;} 	// 13/21
+	@media @media-notsmart	{font-size: @b-fs - 2px; line-height: @b-lh - 4px;} 	
+	@media @media-size-xs	{font-size: @b-fs - 3px; line-height: @b-lh - 4px;} 	
 }
+
+.text-block{
+	div, p, ol, ul{margin-bottom: 10px;}
+	div + h2,
+	p + h2,
+	ul + h2,
+	ol + h2,
+	blockquote + h2,
+	table + h2,
+	div + h3,
+	p + h3,
+	ul + h3,
+	ol + h3,
+	blockquote + h3,
+	table + h3,
+	div + h4,
+	p + h4,
+	ul + h4,
+	ol + h4,
+	blockquote + h4,
+	table + h4,
+	div + h5,
+	p + h5,
+	ul + h5,
+	ol + h5,
+	blockquote + h5,
+	table + h5{
+		padding-top: 30px;
+	}
+
+	h2,h3,h4{margin-bottom: 25px;}
+	* + ol, * + ul{padding-top: 10px;}
+	> ._tb__img{
+		//padding-top: 45px;
+		padding-bottom: 20px;
+	}
+	.table-responsive{
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+	.table{ 
+		thead{
+			td, th{
+				background: @blue-darken;
+				text-align: center;
+				color: @white;
+				//font-family: @proxima-bold;
+				padding: 18px 10px;
+			}
+		}
+		tbody{
+			td, th{
+				padding: 23px 10px;
+			}
+		}
+	}
+}
+blockquote {
+	border-left: 2px solid @blue;
+	font-family: @far-italic;
+	padding: 0 0 0 25px;
+	letter-spacing: 0.5px;
+	@media @media-size-xs{
+		font-size: @b-fs + 5px;
+		line-height: @b-lh + 0px;
+	}
+	@media @media-notsmart{
+		font-size: @b-fs + 7px;
+		line-height: @b-lh + 2px; 
+	}
+}
+/*
 h1{font-family: @din-black;}
 h2{font-family: @din-bold;}
 h3,h4,h5,h6{
@@ -110,65 +179,4 @@ h3,h4,h5,h6{
 		@media @media-screen	{font-size: @b-fs - 1px; line-height: @b-lh - 1px;} 	// 15/23
 		//font-family: @proxima-sbold;
 	}
-}
-.text-block{
-	div, p, ol, ul{margin-bottom: 10px;}
-	div + h2,
-	p + h2,
-	ul + h2,
-	ol + h2,
-	blockquote + h2,
-	table + h2,
-	div + h3,
-	p + h3,
-	ul + h3,
-	ol + h3,
-	blockquote + h3,
-	table + h3,
-	div + h4,
-	p + h4,
-	ul + h4,
-	ol + h4,
-	blockquote + h4,
-	table + h4,
-	div + h5,
-	p + h5,
-	ul + h5,
-	ol + h5,
-	blockquote + h5,
-	table + h5{
-		padding-top: 20px;
-	}
-
-	h4{margin-bottom: 30px;}
-	* + ol, * + ul{padding-top: 10px;}
-	> ._tb__img{
-		padding-top: 45px;
-		padding-bottom: 20px;
-	}
-	.table-responsive{
-		padding-top: 20px;
-		padding-bottom: 10px;
-	}
-	.table{ 
-		thead{
-			td, th{
-				background: @blue-darken;
-				text-align: center;
-				color: @white;
-				//font-family: @proxima-bold;
-				padding: 18px 10px;
-			}
-		}
-		tbody{
-			td, th{
-				padding: 23px 10px;
-			}
-		}
-	}
-}
-blockquote {
-	border-left: 2px solid @red;
-	font-style: italic;
-	padding: 0 0 0 40px;
 }*/

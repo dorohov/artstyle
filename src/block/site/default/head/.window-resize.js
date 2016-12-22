@@ -32,7 +32,7 @@ if (device.mobile()) {
 }
 if (device.mobile() || device.tablet()) {
 	$('.navbar').addClass('navbar-fixed-top');
-
+	//$('.navbar').css("max-width", w_window);
 	$('.owl-slider ul').owlCarousel({
 		margin: 0,
 		loop: true,
