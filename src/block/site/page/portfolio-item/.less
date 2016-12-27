@@ -251,9 +251,67 @@
 	//background: fadeout(@white, 15%);
 	position: absolute;
 	bottom: 30px;
-	@media @media-size-xs{bottom: 5px;}
+	left: 30px;
 	border-radius: 5px;
-	&:before{
+	.icon-heart-svg{
+		width: 34px;
+		height: 34px;
+    	transition: @transition-site;
+    	transform-origin: center;
+	}
+	.icon-heart{
+		stroke:fadeout(@white, 30%);
+		stroke-width:1;
+    	fill:fadeout(@black, 50%);
+    	transition: @transition-site;
+    	transform-origin: center;
+	}
+	&.is-active{
+		cursor: default;
+	}
+	._count{
+		position: absolute;
+		right: 0px;
+		top: 50%;
+		transform: translate(130%,-70%);
+		color: @white;
+		font-family: @proxima;
+		font-size: 14px;
+		background: fadeout(@black, 50%);    
+		padding: 0 5px;
+    	line-height: 26px;
+    	&:before{
+    		content: '';
+    		position: absolute;
+    		left: -5px;
+			top: 50%;
+			transform: translate(0%, -50%);
+			border-right: 5px solid fadeout(@black, 50%);
+			border-top: 5px solid fadeout(@black, 100%);
+			border-bottom: 5px solid fadeout(@black, 100%);
+    	}
+	}
+	@media @media-size-xs{bottom: 5px; left: 5px;}
+
+	&.is-active, 
+	&:hover{
+		//background: @white;
+		/*&:before{			
+			color: @blue;
+		}*/
+		.icon-heart-svg{
+			width: 40px;
+			height: 40px;
+			transition: 0.2s all;
+		}
+		.icon-heart{
+			fill: @blue;
+			transform: scale(1.1);
+			stroke: @blue;
+			transition: 0.2s all;
+		}
+	}
+	/*&:before{
 		font-family: @icon;
 		display: block;
 		width: 100%;
@@ -263,12 +321,7 @@
 		transition: @transition-site;
 		color: fadeout(@black, 50%);
 	}
-	&:hover{
-		//background: @white;
-		&:before{			
-			color: @blue;
-		}
-	}
+	
 	&.icon-like{
 		left: 30px;
 		@media @media-size-xs{left: 5px;}
@@ -283,5 +336,5 @@
 				transform: scale(1.1);
 			}
 		}
-	}
+	}*/
 }
