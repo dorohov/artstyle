@@ -185,8 +185,22 @@
 	<div class="container">
 		<h2 class="_avpc__heading _apc__heading">Видео о нас</h2>
 		<div class="_avpc__video">
-			<button type="button" class="btn-site btn-play _avpc__video-btn"></button>
-		</div>		
+			<button id="about-video-gallery" type="button" class="btn-site btn-play _avpc__video-btn" data-iframe="true" data-src="https://player.vimeo.com/video/183730705?autoplay=1" ></button>
+			
+			<!--
+			<div id="about-video-gallery">
+				<a class="btn-site btn-play _avpc__video-btn" data-src="https://vimeo.com/183730705" data-poster="/img/temp/bg-video.jpg" >
+					
+				</a>
+			</div>
+			-->
+			
+			<!--
+			<iframe src="https://player.vimeo.com/video/183730705" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/183730705">Artstyle // студия дизайна интерьеров</a> from <a href="https://vimeo.com/recpoint">Roman Larchikov</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+			-->
+			
+		</div>
 	</div>
 </div> 	
 	<div class="about-studio-page-content" id="about-studio"> 
@@ -439,7 +453,7 @@
 						<p>Рабочий день с&nbsp;9&nbsp;до&nbsp;18</p>
 						<p>Испытательный срок до&nbsp;3х&nbsp;мес.</p>
 					</div>
-					<button type="button" class="btn-site btn-vacancies btn-blue getModal" data-toggle="modal" data-target="#modal-vacancies-reviews">Откликнуться</button>
+					<button type="button" class="btn-site btn-vacancies btn-blue getModal" data-toggle="modal" data-target="#modal-vacancies-order">Откликнуться</button>
 				</div>
 			</div>
 		</div>
@@ -504,6 +518,23 @@
 
 <script src="/plugins/jquery.scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <!-- <script src="/js/retina.min.js" ></script> -->
+			
+			
+			<link rel="stylesheet" type="text/css" href="/css/lightgallery.css" />
+			<script src="/plugins/lightGallery/js/lightgallery.js"></script>
+			<script>
+			$(function(){
+				$('#about-video-gallery').lightGallery({
+					//youtubePlayerParams : {},
+					selector : 'this',
+					vimeoPlayerParams : {
+						autoplay : 1,
+						byline : 0,
+						title : 0,
+					},
+				});
+			});
+			</script>
 			<script src="/js/retina.min.js" ></script>
 		</div>
 	</body>

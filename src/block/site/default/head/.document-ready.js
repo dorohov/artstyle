@@ -60,8 +60,13 @@ $('._ipc__list').owlCarousel({
 		}
 	}
 });	
-$('.getModal').click(function(){
-	$('#modal-vacancies').modal('hide');
-	setTimeout(function() {$('#modal-vacancies-order').modal('show');}, 500)
-	return false;
+$('.getModal').click(function(event){
+	event.preventDefault();
+	
+	var btn = $(this);
+	var trg = btn.attr('data-target') || '';
+	
+	btn.closest('.modal').modal('hide');
+	setTimeout(function() {$(trg).modal('show');}, 500)
+	//return false;
 });
