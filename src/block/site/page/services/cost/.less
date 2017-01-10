@@ -1,12 +1,16 @@
 //====== prefix ._sctpc__ ======//
 
-@cost-amount: 4; 
-@cost-width: 100px;
+@cost-amount: 11; 
+@cost-height: 120px;
+@cost-width: 120px;
 .costLoop (@index) when (@index < @cost-amount) {  
 	@child: @index + 1;
 	&:nth-child(@{child}) {
     	._sctpc__item::before{
-    		background-position: 0 -(@index * @cost-width);
+    		background-position: 0 -(@index * @cost-height);
+    	}
+    	._sctpc__item:hover::before{
+    		background-position: -(@cost-width) -(@index * @cost-height);
     	}
   	}
   	.costLoop(@index + 1); 
@@ -20,30 +24,74 @@
 }
 ._sctpc__row{
 	padding-top: 20px;
+	flex-wrap: wrap;
 }
 ._sctpc__cols{
 	width: 25%;
 	.costLoop (0);
 	@media @media-size-xs{width: 100%; margin-bottom: 35px;}
 	@media @media-size-xs-l{width: 50%;}
+	@media @media-size-sm-p{width: 33.3333%;}
 }
 ._sctpc__item{
 	text-align: center;
 	font-size: @b-fs - 2px;
 	line-height: @b-lh - 6px;
+	display: block;
+	&, &:focus{color: @b-color;}
+	@media @media-notsmart{margin-bottom: 70px;}
+	&:hover{
+		color: @blue;
+		&::before{
+			background-color: @blue;
+			color: @white!important;
+		}
+	}
 	&::before{
 		content: '';
 		background-image: url("@{url-path-img}/services/bg-icon.png");
 		display: block;
 		width: @cost-width;
-		height: @cost-width;
+		line-height: @cost-height - 2px;
+		height: @cost-height - 2px;
 		margin: 0 auto 10px; 
+		border: 1px solid @blue;
+		border-radius: 50%;
+		transition: 0.35s background-color, 0.35s color;
+		._sctpc__cols:nth-child(6) &,
+		._sctpc__cols:nth-child(7) &,
+		._sctpc__cols:nth-child(8) &,
+		._sctpc__cols:nth-child(9) &,
+		._sctpc__cols:nth-child(11) &{
+			font-family: @icon;
+			color: @blue;
+			font-size: 66px;
+		}
+		._sctpc__cols:nth-child(6) &{
+			content: @icon-improvement;
+		}
+		._sctpc__cols:nth-child(7) &{
+			content: @icon-elegant;
+		}
+		._sctpc__cols:nth-child(8) &{
+			content: @icon-paint;
+		}
+		._sctpc__cols:nth-child(9) &{
+			content: @icon-brickwall;
+		}
+		._sctpc__cols:nth-child(11) &{
+			content: @icon-technology;
+		}
 	}
 }
 ._sctpc__item-cost{
-	padding-top: 5px;
+	padding-top: 10px;
 	font-size: @b-fs + 8px;
-	line-height: @b-lh + 8px;
+	line-height: @b-lh + 2px;
 	font-family: @far-bold;
+	@media @media-size-sm-p{
+		font-size: @b-fs + 6px;
+		line-height: @b-lh + 2px;
+	}
 }
 ._sctpc__{}
