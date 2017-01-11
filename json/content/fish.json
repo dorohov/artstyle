@@ -17,5 +17,6 @@
 		"inst_name":"instagram.com/artstyle"
 	},
 	"url-path-img":"",
+	"url-path-img":"/img",
 	"url-path-favicon":"/favicon"
 }
