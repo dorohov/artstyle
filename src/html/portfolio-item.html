@@ -30,7 +30,9 @@
 						currentPagerPosition:'left',
 						onSliderLoad: function(el) {
 							el.lightGallery({
-								selector: '#imageGallery .lslide'
+								selector: '#imageGallery .lslide',
+								showThumbByDefault: false,
+								download: false
 							});
 							if (!device.mobile()) {							
 								$("._pipc__cols-note").prependTo($(".lSSlideOuter"));

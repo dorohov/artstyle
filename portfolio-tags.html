@@ -89,7 +89,8 @@
 	<div class="_ptpc__slider">
 		<div class="_ptpc__slider-inner" id="imageGallery">
 			<div class="_ptpc__slider-item" data-thumb="/img/temp/project-200x150.jpg" data-src="http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-105-68m2-2016g-mtsensk/1_3.jpg">
-				<img src="/img/temp/project-1595x600.jpg" alt="">
+				<!-- <img src="/img/temp/project-1595x600.jpg" alt=""> -->
+				<img src="/img/temp/project-1595x600.jpg" data-src-0="/img/temp/project-1595x600.jpg" data-src-768="medium.png" data-src-1025="hi-fi.png" alt="" />
 				<a href="/portfolio-item.html" class="_ptpc__slider-item-btn btn-site btn-blue-opacity btn-project _azbn__btn-project">Перейти к проекту</a>
 			</div>
 			<div class="_ptpc__slider-item" data-thumb="http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-105-68m2-2016g-mtsensk/1_4.jpg" data-src="http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-105-68m2-2016g-mtsensk/1_4.jpg">
@@ -280,6 +281,15 @@
 			<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
 			<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
 			<script src="/js/retina.min.js" ></script>
+			<script src="/js/response.min.js" ></script> 
+			<script>
+				Response.create({
+				    prop: "width" 
+				  , prefix: "data-src- r src"
+				  , breakpoints: [1281,1025,961,768,481,320,0]
+				  , lazy: true
+				});
+			</script>
 		</div>
 	</body>
 </html> 

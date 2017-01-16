@@ -59,6 +59,15 @@
 			<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
 			<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
 			<script src="/js/retina.min.js" ></script>
+			<script src="/js/response.min.js" ></script> 
+			<script>
+				Response.create({
+				    prop: "width" 
+				  , prefix: "data-src- r src"
+				  , breakpoints: [1281,1025,961,768,481,320,0]
+				  , lazy: true
+				});
+			</script>
 		</div>
 	</body>
 </html> 
