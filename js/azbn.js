@@ -159,9 +159,12 @@ $(function(){
 				'action' : 'azbnajax_call',
 				'method' : 'form/save',
 				'type' : 'json',
-			}, form_s);
+				'form' : form_s,
+			});
 			
 			$.post('/wp-admin/admin-ajax.php', params, function(data){
+				
+				form.trigger('reset');
 				
 				data = JSON.parse(data);
 				
@@ -173,6 +176,59 @@ $(function(){
 				
 			});
 			
+		});
+		
+		$(document.body).on('click.azbn', '.finalPanelModal', {}, function(event){
+			event.preventDefault();
+			
+			var btn = $(this);
+			var form = btn.closest('form');
+			//var modal = btn.closest('.modal');
+			
+			var form_s = form.serialize();
+			
+			var params = $.extend({}, {
+				'action' : 'azbnajax_call',
+				'method' : 'form/save',
+				'type' : 'json',
+				'form' : form_s,
+			});
+			
+			$.post('/wp-admin/admin-ajax.php', params, function(data){
+				
+				form.trigger('reset');
+				
+				data = JSON.parse(data);
+				
+				$('#modal-finalFormModal-result .form-save-result').html(data.response.data.item.title);
+				
+				//modal.modal('hide');
+				
+				$('#modal-finalFormModal-result').modal('show');
+				
+			});
+			
+		});
+		
+	})();
+	
+	(function(){
+		
+		$(document.body).on('mousedown', 'img', {}, function(event){
+			event.preventDefault();
+			if(event.button == 0){
+				//Левая кнопка мыши
+			} else if(event.button == 1){
+				//Колесо
+			} else if(event.button == 2){
+				//Правая кнопка мыши
+				//event.stopPropagation();
+			}
+			
+		});
+		
+		window.oncontextmenu = (function(e){
+			return false;
 		});
 		
 	})();
