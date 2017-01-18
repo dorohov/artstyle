@@ -50,7 +50,7 @@
 								<a href="https://vk.com/public57147545" target="_blank" class="soc-site-item icon-vk"></a>
 								<a href="#" target="_blank" class="soc-site-item icon-fb"></a>
 								<a href="https://www.instagram.com/artstyle/" target="_blank" class="soc-site-item icon-inst"></a>
-								<a href="#" target="_blank" class="soc-site-item icon-pint"></a> 
+								<a href="#" target="_blank" class="soc-site-item icon-tw"></a>  
 							</div>
 						</div>
 						<div class="cols navbar-nav-cols">
@@ -86,7 +86,11 @@
 					<div class="portfolio-item-page-content content-block second"> 
 	<div class="row _pipc__row">
 		<div class="cols _pipc__cols-note">
-			<div class="_pipc__tags"><a href="/portfolio-tags.html" class="tags-item bg-blue">Квартиры</a></div>
+			<div class="_pipc__tags">
+				<div class="_pipc__tags-item">
+					<a href="/portfolio-tags.html" class="tags-item bg-blue">Квартиры</a>
+				</div>
+			</div>
 			<h1 class="_pipc__heading">Дизайн-проект квартиры</h1>
 			<div class="_pipc__desc">
 				<div class="row _pipc__row-desc">
@@ -150,6 +154,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="_pipc__count-block">
+				1 / 40
+			</div> 
 			<div class="_pipc__slider">
 				<div class="_pipc__slider-inner" id="imageGallery">
 					<div class="_pipc__slider-item" data-thumb="/img/temp/project-200x150.jpg" data-src="http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-105-68m2-2016g-mtsensk/1_3.jpg">
@@ -405,6 +412,7 @@
 							if (!device.mobile()) {							
 								$("._pipc__cols-note").prependTo($(".lSSlideOuter"));
 								$("._pipc__soc-block").prependTo($(".lSSlideWrapper"));
+								$("._pipc__count-block").appendTo($(".lSSlideWrapper"));
 							}; 
 						}, 	  
 						responsive : [

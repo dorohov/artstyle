@@ -1943,6 +1943,7 @@ textarea._frs__form-control{
 	max-width: 430px;
 	margin-left: auto;	
 	@media @media-device{margin-right: auto;}
+	@media @media-screen{margin-right: 10px;}
 }	
 .project-bottom__project-nav-panel{
 	max-width: 640px;
@@ -2441,6 +2442,9 @@ textarea._frs__form-control{
     letter-spacing: 0.5px;
     position: relative;
     overflow: hidden;
+
+    //v.2
+    background-color: #e2ecf5;
     &:before{
     	content: '#';
     	position: absolute;
@@ -2468,8 +2472,12 @@ textarea._frs__form-control{
 	    	}
 	    }
     }
-    &,&:hover,&:focus{color: @b-tags-color;}
-    &.bg-blue			{background-color: @tags-blue}
+    &,&:hover,&:focus{
+    	color: @b-tags-color;
+	    //v.2
+	    color: #3b72b1;
+    }
+    /*&.bg-blue			{background-color: @tags-blue}
     &.bg-blue-dark		{background-color: @tags-blue-dark}
     &.bg-green			{background-color: @tags-green}
     &.bg-green-dark		{background-color: @tags-green-dark}
@@ -2481,7 +2489,7 @@ textarea._frs__form-control{
     &.bg-purple-light	{background-color: @tags-purple-light}
     &.bg-red			{background-color: @tags-red}
     &.bg-grey			{background-color: @tags-grey}
-    &.bg-brown			{background-color: @tags-brown}
+    &.bg-brown			{background-color: @tags-brown}*/
 }
 //====== prefix .vacancies-item ======//
 .vacancies-item{	
@@ -2769,7 +2777,41 @@ textarea._frs__form-control{
 	margin-right: 20px;
 }
 ._pipc__tags{
-	margin-bottom: 10px;
+	//margin: 0 -2.5px 10px;
+	margin: 0 0px 10px;
+	display: flex;
+    flex-wrap: wrap;
+    //@media @media-size-xs{justify-content: center;}
+    .tags-item{
+    	/*margin: 0; 
+
+		display: block;
+    	@media @media-screen{
+    		padding: 0px 10px;
+    		&:before{display: none}
+    		&:hover{
+				background-color: @blue;
+    			color: @white;
+    		}
+    	} */ 
+    }
+}
+._pipc__tags-item{
+	/*padding: 0 2.5px 5px;
+	@media @media-screen{  	
+		&:nth-child(8n+1),
+		&:nth-child(8n+4),
+		&:nth-child(8n+6),
+		&:nth-child(8n+7){
+			width: 20%;
+		}
+		&:nth-child(8n+2),
+		&:nth-child(8n+3),
+		&:nth-child(8n+5),
+		&:nth-child(8n+8){
+			width: 30%;
+		}
+    }*/
 }
 ._pipc__heading{
 	font-size: @b-fs + 16px; //36
@@ -2864,6 +2906,13 @@ textarea._frs__form-control{
 ._pipc__cols-soc{
 	@media @media-device{margin-bottom: 35px;}
 }
+._pipc__count-block{
+    padding-top: 10px;
+    font-family: @code-lc;
+    font-size: 24px;
+    line-height: 32px;
+    @media @media-size-xs {padding: 0 0 10px;}
+}
 ._pipc__slider{
 	position: relative;	
 	.lSSlideOuter {
@@ -2893,7 +2942,7 @@ textarea._frs__form-control{
 		}
 		@media @media-screen{
 			width: 60%;
-			margin-bottom: 90px;
+			margin-bottom: 80px;
 		}
 		@media @media-size-mdl{
 			width: 50%;
@@ -2948,6 +2997,7 @@ textarea._frs__form-control{
 	@media @media-size-lg{height: 345px;}
 	@media @media-size-xl{height: 440px;}
 	@media @media-size-xxl{height: 540px;}
+	img{border: 2px solid @blue;}
 }
 /*
 ._pipc__slider-item-preview{
@@ -3098,14 +3148,20 @@ textarea._frs__form-control{
 ._ptpc__slider{
 	margin-bottom: 30px;
 	.lSSlideWrapper{
-		margin-bottom: 30px;    
-		max-width: 800px;
     	margin: 0 auto 30px;
+		@media @media-size-xs{max-width: 330px;}
+		@media @media-size-sm{max-width: 665px;}
+		@media @media-screen{max-width: 800px;}
 	}
 }
 ._ptpc__slider-item{
 	position: relative;
-	img{max-height: 600px; margin: 0 auto;}
+	img{
+		margin: 0 auto;
+		@media @media-size-xs{max-height: 250px;}
+		@media @media-size-sm{max-height: 500px;}
+		@media @media-screen{max-height: 600px;}
+	}
 }
 ._ptpc__slider-item-btn{
 	position: absolute;
@@ -3116,6 +3172,11 @@ textarea._frs__form-control{
     	left: 0;
     	bottom: 0;
     }
+}
+.lg-outer{
+	.lg-image{
+		max-height: ~"calc(100% - 200px)"!important;
+	}
 }
 .reviews-page-content{
 
@@ -3937,14 +3998,14 @@ textarea._frs__form-control{
 	font-size: @b-fs + 20px;
 	line-height: @b-lh + 20px;
 	margin-bottom: 15px;
-	br{display: none;}	
+	span{display: inline-block;}	
 	@media @media-size-xs{
 		font-size: @b-fs + 10px;
 		line-height: @b-lh + 10px;
 		text-align: center;
 	}
 	@media @media-size-xxl{
-		br{display: block;}
+		span{display: block;}
 	}
 }
 ._atpc__team-post{
