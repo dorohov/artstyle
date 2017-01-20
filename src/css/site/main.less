@@ -33,9 +33,11 @@ body {
 	}
 	@media @media-screen{
 		padding-top: 252px;
+		body.archive &{padding-top: 222px;}
 	}
 	@media @media-size-mdl{
 		padding-top: 231px;
+		body.archive &{padding-top: 201px;}
 	}
 }
 .content-wrap{
@@ -311,7 +313,7 @@ ul{
 	justify-content: center;
 	align-items: center;
 	padding: 50px;
-}
+}/*
 ._czr__preloader-process-container {
 	display:block;
 	position:relative;
@@ -331,9 +333,10 @@ ul{
 	z-index:0;
 	background: @white;
 	transition: all 0.3s ease;
-}
+}*/
 ._czr__preloader-inner{
 	height: 100%;
+	position: relative;
 }
 ._czr__preloader-center{	
 	height: 100%;
@@ -344,22 +347,51 @@ ul{
 }
 ._czr__preloader-process-container {
 	display:block;
-	position:relative;
+	//position:relative;
+	//width: 100%;
+	//height: 6px;
+	//background: transparent;	
 	width: 100%;
-	height: 6px;
-	background: transparent;	
+	height: 100%;    
+	position: absolute;
+    left: 0;
+    top: 0;
+	//background: @blue;
+	&::before,
+	&::after{
+		content: '';
+		position: absolute;
+		top: 0px;
+		width: 12px;
+		height: 100%;
+		background: @blue;
+	}
+	&::before{left: 0;}
+	&::after{right: 0}
 }
 ._czr__preloader-process-level{
 	position:absolute;
 	left:0;
 	top:0;
 	display:block;
-	width: 0%;
+	//width: 0%;
 	height:100%;
 	margin:0 auto;
-	z-index:0;
-	background: @blue;
+	z-index:1;
+	//background: @white;
 	transition: all 0.3s ease;
+	width: 100%;
+	&::before,
+	&::after{
+		content: '';
+		position: absolute;
+		top: 0px;
+		width: 12px;
+		height: 100%;
+		background: @white;
+	}
+	&::before{left: 0;}
+	&::after{right: 0}
 }
 ._czr__preloader-percent{
 	text-align: center;

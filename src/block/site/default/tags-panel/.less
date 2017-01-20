@@ -66,12 +66,12 @@
     	top: 50%;
     	transform: translateY(-50%);
     	transition: @transition-site;
-    	left: -15px;
+    	left: 15px;
     	font-size: @b-tags-fs + 2px;
     }
     &:hover{
     	&:before{
-			left: 15px;
+			left: -15px;
     	}
     }
     @media @media-device{		
@@ -79,11 +79,11 @@
     	margin: 0 5px 5px 0;
     	padding: 0 25px;    	
 	    &:before{
-	    	left: -10px;
+	    	left: 10px;
 	    }
 	    &:hover{
 	    	&:before{
-				left: 10px;
+				left: -10px;
 	    	}
 	    }
     }

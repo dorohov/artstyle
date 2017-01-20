@@ -67,7 +67,7 @@ $(window).load(function(event){
 			
 			var pos = 0;
 			
-			b.css({'width' : pos + '%'}).attr('data-pos', pos);
+			b.css({'height' : 100 - pos + '%'}).attr('data-pos', pos);
 			
 			var intr = setInterval(function() {
 				
@@ -84,7 +84,7 @@ $(window).load(function(event){
 					}
 					
 					b.css({
-						'width' : pos + '%',
+						'height' : 100 - pos + '%',
 					})
 						.attr('data-pos', pos);
 					

@@ -16,12 +16,19 @@ b, strong{font-family: @far-bold; font-weight: normal}
 	font-family: @code; 
 	margin-bottom: 35px;
 	text-align: center;
+	@media @media-notsmart{
+		body.archive &{margin-bottom: 15px;}
+	}
 	@media @media-size-xs{margin-bottom: 25px}
 }
 h1{
-	@media @media-screen	{font-size: @b-fs + 24px; line-height: @b-lh + 24px;} 	// 44/52
+	@media @media-screen	{
+		font-size: @b-fs + 24px; line-height: @b-lh + 24px;		
+		body.archive &{font-size: @b-fs + 14px; line-height: @b-lh + 14px;}
+	} 	// 44/52
 	@media @media-size-xs	{font-size: @b-fs + 10px; line-height: @b-lh + 10px;} 	// 30/38
 	@media @media-size-sml	{font-size: @b-fs + 20px; line-height: @b-lh + 20px;} 	// 40/48
+
 }
 h2{
 	@media @media-screen	{font-size: @b-fs + 15px; line-height: @b-lh + 12px; letter-spacing: 1.5px;} 	// 35/40
