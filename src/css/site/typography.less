@@ -24,7 +24,7 @@ b, strong{font-family: @far-bold; font-weight: normal}
 h1{
 	@media @media-screen	{
 		font-size: @b-fs + 24px; line-height: @b-lh + 24px;		
-		body.archive &{font-size: @b-fs + 14px; line-height: @b-lh + 14px;}
+		body.archive &{font-size: @b-fs + 4px; line-height: @b-lh + 4px;}
 	} 	// 44/52
 	@media @media-size-xs	{font-size: @b-fs + 10px; line-height: @b-lh + 10px;} 	// 30/38
 	@media @media-size-sml	{font-size: @b-fs + 20px; line-height: @b-lh + 20px;} 	// 40/48
@@ -38,7 +38,6 @@ h2{
 	color: @blue;	
 }
 h3, h4{
-
 	@media @media-screen	{font-size: @b-fs + 4px; line-height: @b-lh + 2px; letter-spacing: 1px;} 	// 24/30
 	@media @media-device	{letter-spacing: 0.5px;} 
 	@media @media-size-xs	{font-size: @b-fs + 0px; line-height: @b-lh - 2px;} 
@@ -82,7 +81,32 @@ h6{
 		padding-top: 30px;
 	}
 
-	h2,h3,h4{margin-bottom: 25px;}
+	h2,h3,h4{
+		margin-bottom: 25px;
+		color: @b-color;
+	}
+	h2{
+	@media @media-screen	{font-size: @b-fs + 5px; line-height: @b-lh + 2px; letter-spacing: 1.5px;} 	// 25/30	
+	}
+	h3, h4{
+		@media @media-screen	{font-size: @b-fs + 0px; line-height: @b-lh - 2px; letter-spacing: 1px;} 	// 20/26
+	}
+	a{	
+		color: @b-color;
+		transition: @transition-site;
+		border-bottom: 1px solid fadeout(@black, 50%);
+		&:hover{
+			border-color: fadeout(@black, 100%);
+		}	
+		&[href^="tel:"]{
+			&, &:focus, &:hover{
+				color: @b-color;
+				font-family: @code-lc;
+				text-decoration: none;
+				border-bottom: none; 
+			}
+		}
+	}
 	* + ol, * + ul{padding-top: 10px;}
 	> ._tb__img{
 		//padding-top: 45px;

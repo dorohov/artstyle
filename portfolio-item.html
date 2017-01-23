@@ -158,6 +158,11 @@
 				1 / 40
 			</div> 
 			<div class="_pipc__slider">
+
+				<div class="_pipc__slider-border top"></div> 
+				<div class="_pipc__slider-border bottom"></div> 
+				<div class="_pipc__slider-border left"></div> 
+				<div class="_pipc__slider-border right"></div> 
 				<div class="_pipc__slider-inner" id="imageGallery">
 					<div class="_pipc__slider-item" data-thumb="/img/temp/project-200x150.jpg" data-src="http://intdez.ru/wp-content/gallery/dizayn-proekt-kvartiryi-105-68m2-2016g-mtsensk/1_3.jpg">
 						<img src="/img/temp/project-1024x575.jpg" alt="">
@@ -413,6 +418,7 @@
 								$("._pipc__cols-note").prependTo($(".lSSlideOuter"));
 								$("._pipc__soc-block").prependTo($(".lSSlideWrapper"));
 								$("._pipc__count-block").appendTo($(".lSSlideWrapper"));
+								//$("._pipc__slider-inner").wrap($("._pipc__slider-border"));
 							}; 
 						}, 	  
 						responsive : [

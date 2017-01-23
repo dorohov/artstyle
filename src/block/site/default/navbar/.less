@@ -396,17 +396,19 @@
 					margin-top: 5px;
 					box-shadow: none;
 					border-radius: 0;
-					padding: 18px 0 22px;
+					padding: 10px 0 15px;
 				}
 				> li {
 					> a{
 						font-family: @b-nav-ff;
-						font-size: @b-nav-fs + 1px; //17px
-						line-height: @b-nav-lh - 5px; //20px
+						font-size: @b-nav-fs - 1px; //16px
+						line-height: @b-nav-lh - 7px; //18px
 						background-color: fadeout(@white, 100%);
 						transition: @transition-site;
+						padding: 3px 15px;
 						@media @media-device{
 							color: @b-nav-color-device;
+							margin-bottom: 7px;
 						}
 						@media @media-screen{
 							color: @b-nav-color;

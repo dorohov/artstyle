@@ -84,6 +84,16 @@
 		}
 	}
 }
+span._sctpc__item{
+	&:hover{
+		color: lighten(@black, 0%);
+		&::before{
+			background-color: lighten(@black, 75%);
+			border-color: lighten(@black, 75%);
+			color: @white!important;
+		}
+	}
+}
 ._sctpc__item-cost{
 	padding-top: 10px;
 	font-size: @b-fs + 8px;

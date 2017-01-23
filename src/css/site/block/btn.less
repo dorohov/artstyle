@@ -20,6 +20,7 @@
 .soc-site-item{
 	display: inline-block;
 	margin-right: 5px;
+
 	&:before{
 		font-family: @icon;
 		display: block;
@@ -72,6 +73,11 @@
 			&:before{color: @color-tw;}
 		}
 	}
+}
+span.soc-site-item{
+	&:before{
+		color: lighten(@black, 65%)!important;
+	}		
 }
 .btn-blue{
 	&, &:hover, &:focus{color: @white;}
