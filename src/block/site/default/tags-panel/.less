@@ -43,7 +43,7 @@
 .tags-row{
 	display: flex;
 	flex-wrap: wrap;
-	@media @media-device{justify-content: center;}
+	@media @media-size-sm{justify-content: center;}
 }
 .tags-item{
 	display: inline-block;
@@ -73,7 +73,7 @@
     	&:before{
 			left: -15px;
     	}
-    }
+    }	
     @media @media-device{		
 		line-height: @b-tags-lh + 10px;
     	margin: 0 5px 5px 0;
@@ -87,6 +87,12 @@
 	    	}
 	    }
     }
+    @media @media-size-xs{
+		font-size: @b-tags-fs - 2; //10
+		line-height: @b-tags-lh + 8px; //32
+		margin: 0 5px 5px 0;
+		padding: 0 10px 0 25px;
+    }	
     &,&:hover,&:focus{
     	color: @b-tags-color;
 	    //v.2

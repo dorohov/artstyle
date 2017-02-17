@@ -1,0 +1,1 @@
+"use strict";$(function(){$("._ipc__list").owlCarousel({margin:20,items:8,navText:[],nav:!1,dots:!1,responsive:{0:{items:3,dots:!0},767:{items:8}}})});

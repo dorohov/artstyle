@@ -1,27 +1,56 @@
-.index-video-content{
+.index-video-content{	
+	overflow: hidden;
 	margin-bottom: 70px;
+	position: relative;
 	@media @media-size-xs{margin-bottom: 35px;}
 	@media @media-size-sm{margin-bottom: 40px;}
 	@media @media-size-mdl{margin-bottom: 50px;}
 }
 ._ivc__video{
-	height: 685px;
-	background-image: url("@{url-path-img}/temp/bg-video.jpg");
+	width: 100%;
+	/*background-image: url("@{url-path-img}/temp/bg-video.jpg");
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;*/
 	position: relative;
-	@media @media-size-xs-p{height: 500px}
-	@media @media-size-xs-l{height: 350px}
-	@media @media-size-sm-l{height: 500px}
+	z-index: 2;
+	//@media @media-size-xs-p{height: 500px}
+	//@media @media-size-xs-l{height: 350px}
+	@media @media-size-sm-p{height: 330px}
+	@media @media-size-sm-l{height: 450px}
 	@media @media-size-mdl{height: 355px}
 	@media @media-size-xl{height: 495px}
+	@media @media-size-xxl{height: 685px}
+}
+._ivc__video-block{
+	@media @media-size-xs{
+		overflow: hidden;
+	}
+	@media @media-size-xs-p{
+		height: 29vh;
+	}
+	@media @media-size-xs-l{
+		height: 300px;
+	}
+}
+._ivc__bg-video{
+	width: 100%;
+	@media @media-size-xs-p{
+		transform: scale(1.4);
+	}
+	@media @media-size-xs-l{
+		transform: scale(1.4);
+	}
+	@media @media-notsmart{
+		top: 50%;
+		transform: scale(1.1) translateY(-45%);
+		position: absolute;
+		left: 0px;
+		z-index: 1;
+
+	}
 }
 ._ivc__heading{
 	opacity: 0.75;
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	text-align: center;
 	font-family: @code;
 	color: @white;
@@ -35,6 +64,14 @@
 		font-size: @b-fs + 10px; //30px;
 		line-height: @b-lh + 16px;//40
     	letter-spacing: 0.5px;
+    	color: @black;
+    	padding: 0 0 30px;
+	}
+	@media @media-notsmart{
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 	@media @media-size-sm{
 		font-size: @b-fs + 20px; //40px;
@@ -65,6 +102,7 @@
 	@media @media-size-mdl{bottom: 30px;}
 	@media @media-device{
 		transform: translateX(-50%);
+		display: none;
 	}
 	@media @media-screen{
 		transform-origin: center;		
