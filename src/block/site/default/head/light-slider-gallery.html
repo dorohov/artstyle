@@ -34,7 +34,7 @@
 			onSliderLoad: function(el) {
 				el.lightGallery({
 					selector: '#imageGallery .lslide',
-					showThumbByDefault: false,
+					showThumbByDefault: true,
 					download: false,
 					//counter : true,
 					//appendCounterTo : '._pipc__count-block',
@@ -43,7 +43,23 @@
 						console.log(123);
 					},
 					*/
+					/*
+					onAfterSlide : function(event){
+						//console.log(index, fromTouch, fromThumb);
+						alert('123');
+					},
+					*/
 				});
+				
+				$('.lSSlideOuter .lSPager.lSGallery li a').on('click', function(event){
+					//console.log($(this).closest('li'));
+					
+					var _items = $(this).closest('.lSGallery').find('li');
+					
+					$(document.body).trigger('azbn.setSliderCounters',[_items.index($(this).closest('li')) + 1, _items.length]);
+					
+				});
+				
 				if (!device.mobile()) {							
 					$("._pipc__cols-note").prependTo($(".lSSlideOuter"));
 					$("._pipc__soc-block").prependTo($(".lSSlideWrapper"));
@@ -52,19 +68,19 @@
 				}; 
 			}, 	  
 			responsive : [
-	            {
-	                breakpoint:767,
-	                settings: {
+				{
+					breakpoint:767,
+					settings: {
 						thumbItem:4
-                  	}
-	            },
-	            {
-	                breakpoint:475,
-	                settings: {
+				  	}
+				},
+				{
+					breakpoint:475,
+					settings: {
 						thumbItem:2
-                  	}
-	            }
-	        ]
+				  	}
+				}
+			]
 		}); 
 		
 		$('.lSAction .lSPrev, .lSAction .lSNext').on('click', function(event){
@@ -76,6 +92,8 @@
 		});
 		
 		$('.lSAction .lSPrev').trigger('click');
+		
+		
 		
 	});
 </script>

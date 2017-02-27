@@ -76,12 +76,12 @@ $(function(){
 				
 				if(liked) {
 					
-					btn.removeClass('is-active');
+					$('.portfolio-item-page-content .azbn-project-like-btn').removeClass('is-active');//btn.removeClass('is-active');
 					change = -1;
 					
 				} else {
 					
-					btn.addClass('is-active');
+					$('.portfolio-item-page-content .azbn-project-like-btn').addClass('is-active');//btn.addClass('is-active');
 					change = 1;
 					
 				}
@@ -103,13 +103,13 @@ $(function(){
 							
 							var item = data.response.data.item;
 							
-							var _count = btn.find('._count');
+							var _count = $('.portfolio-item-page-content .azbn-project-like-btn').find('._count');//btn.find('._count');
 							
 							if(_count.length == 0) {
 								_count = $('<span/>', {
 										class : '_count',
 								});
-								_count.appendTo(btn);
+								_count.appendTo($('.portfolio-item-page-content .azbn-project-like-btn'));//btn
 							}
 							
 							_count.html(item.like_count);
@@ -146,20 +146,20 @@ $(function(){
 	
 	(function(){
 		
-		$(document.body).on('click.azbn', '.finalFormModal', {}, function(event){
+		$(document.body).on('submit.azbn', '.azbn-form__default', {}, function(event){
 			event.preventDefault();
 			
-			var btn = $(this);
-			var form = btn.closest('form');
-			var modal = btn.closest('.modal');
+			//var btn = $(this);
+			var form = $(this);//btn.closest('form');
+			var modal = form.closest('.modal');
 			
-			var form_s = form.serialize();
+			var sform = form.serialize();
 			
 			var params = $.extend({}, {
 				'action' : 'azbnajax_call',
 				'method' : 'form/save',
 				'type' : 'json',
-				'form' : form_s,
+				'form' : sform,
 			});
 			
 			$.post('/wp-admin/admin-ajax.php', params, function(data){
@@ -170,7 +170,9 @@ $(function(){
 				
 				$('#modal-finalFormModal-result .form-save-result').html(data.response.data.item.title);
 				
-				modal.modal('hide');
+				if(modal.length) {
+					modal.modal('hide');
+				}
 				
 				$('#modal-finalFormModal-result').modal('show');
 				
@@ -178,6 +180,7 @@ $(function(){
 			
 		});
 		
+		/*
 		$(document.body).on('click.azbn', '.finalPanelModal', {}, function(event){
 			event.preventDefault();
 			
@@ -209,11 +212,12 @@ $(function(){
 			});
 			
 		});
+		*/
 		
 	})();
 	
 	(function(){
-		
+		/*
 		$(document.body).on('mousedown', 'img', {}, function(event){
 			event.preventDefault();
 			if(event.button == 0){
@@ -230,7 +234,7 @@ $(function(){
 		window.oncontextmenu = (function(e){
 			return false;
 		});
-		
+		*/
 	})();
 	
 });
