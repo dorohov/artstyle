@@ -36,7 +36,24 @@
 			
 			var pos = 0;
 			
-			b.css({'height' : 100 - pos + '%'}).attr('data-pos', pos);
+			b
+				.css({
+					height : 100 - pos + '%',
+				})
+				.attr('data-pos', pos)
+			;
+			
+			var __needClosePL = function() {
+				
+				setTimeout(function(){
+					
+					$('.page-loader')
+						.data('window-can-close-it', true)
+						.trigger('fecss.can-close-it');
+					
+				}, 2700);
+				
+			};
 			
 			var intr = setInterval(function() {
 				
@@ -64,6 +81,8 @@
 					$('.page-loader')
 						.data('counter-can-close-it', true)
 						.trigger('fecss.can-close-it');
+					
+					__needClosePL();
 					
 				}
 				
