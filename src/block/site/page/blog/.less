@@ -6,22 +6,30 @@
 	@media @media-device{flex-wrap: wrap;}
 }
 ._bpc__cols-left{
-	width: 100%;
+	//width: 100%;
 	
 	//&.azbn-actions-list {width: 100%;}
 	
-	//@media @media-device{width: 100%;}
+	@media @media-device{width: 100%;}
+	@media @media-screen{width: 75%;}
+	@media @media-size-xxl{width: 80%;}
 }
 ._bpc__cols-right{
-	width: 25%;
+	
 	@media @media-device{width: 100%;}
+	@media @media-screen{width: 25%;}
+	@media @media-size-xxl{width: 20%;}
 }
 ._bpc__list-row{
 	flex-wrap: wrap;
 }
 ._bpc__list-cols{
-	width: 25%;
+	
 	//.azbn-actions-list & {width: 25%;}
 	@media @media-size-xs{width: 100%;}
 	@media @media-size-sm{width: 50%;}
+	@media @media-screen{
+		width: 33.33333%;
+	}
+	@media @media-size-xxl{width: 25%;}
 }
