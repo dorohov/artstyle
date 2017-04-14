@@ -14,10 +14,19 @@
 				<input type="tel" class="_frs__form-control form-control validate[required,custom[phone]]"  id="f[phone]" placeholder="Ваш телефон">
 			</label>	
 		</div>
-		<div class="cols _frs__cols">
+		<div class="cols _frs__cols btn">
 			<div class="_frs__input _frs__btn">
 				<button type="submit" class="btn-site btn-blue btn-submit">Отправить заявку</button>
 			</div>	
+		</div>
+		<div class="cols _frs__cols full">
+			<div class="_frs__input _frs__agreement">
+		        <input class="_frs__agreement-checkbox validate[required]" id="f[processing]" name="f[processing]" checked type="checkbox">
+		        <label for="f[processing]" class="_frs__agreement-label"></label>
+				<label for="f[processing]" class="_frs__agreement-text">
+					Я согласен на обработку <a href="/agreement.html">персональных данных</a>
+				</label>           
+			</div>
 		</div>
 	</div>
 </form> 
