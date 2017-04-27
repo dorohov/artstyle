@@ -10,7 +10,9 @@ $(function(){
 	
 	(function(){
 		
-		$('.azbn-jqfeShowMoreBtn-btn')
+		var smbtn = $('.azbn-jqfeShowMoreBtn-btn');
+		
+		smbtn
 			.jqfeShowMoreBtn({
 				container:'.azbn-jqfeShowMoreBtn-container',
 				items:'.azbn-jqfeShowMoreBtn-item',
@@ -27,7 +29,108 @@ $(function(){
 			.trigger('click')
 		;
 		
+		if($('.portfolio-page-content').length) {
+			
+			var ss = window.sessionStorage || null;
+			
+			if(ss) {
+				
+				$('html, body').animate({
+					scrollTop : parseInt(ss.getItem('portfolio.scroll_pos') || 0) + 'px',
+				}, 350);
+				
+				$(window).on('scroll',function(event){
+					
+					ss.setItem('portfolio.scroll_pos', $(document).scrollTop());
+					
+				});
+				
+			}
+			
+		}
+		
+		/*
+		var _pos = parseInt(ss.set('azbn.portfolio.scrollTop') || 0);
+		
+		console.log('On start azbn.portfolio.scrollTop', _pos);
+		
+		if(_pos) {
+			
+			$('html, body').animate({
+				scrollTop : _pos,
+			}, 350);
+			
+		} else {
+			
+			$('.azbn-jqfeShowMoreBtn-btn')
+				
+				.on('click.azbn', function(event){
+					event.preventDefault();
+					
+					var btn = $(this);
+					
+					var pos = btn.offset().top;
+					ss.set('azbn.portfolio.scrollTop', pos);
+					
+					console.log('On click azbn.portfolio.scrollTop', pos);
+					
+				})
+				
+				.jqfeShowMoreBtn({
+					container:'.azbn-jqfeShowMoreBtn-container',
+					items:'.azbn-jqfeShowMoreBtn-item',
+					display:'block',
+					count:9,
+					css_hidden:{
+						opacity:0,
+					},
+					css_visible:{
+						opacity:1,
+					},
+					animation_time:700,
+				})
+				.trigger('click')
+			;
+			
+		}
+		*/
+		
 	})();
+	
+	/*
+	(function(){
+		
+		if($('.portfolio-page-content').length) {
+			
+			setTimeout(function(){
+				
+				var ss = new jsSessionStorage();
+				
+				var btn = $('.azbn-jqfeShowMoreBtn-btn');
+				
+				var pos = parseInt(ss.get('azbn.portfolio.scrollTop')) || 0;
+				
+				var b_pos = btn.offset().top;
+				
+				while(b_pos < pos) {
+					
+					$('html, body').animate({
+						scrollTop : b_pos,
+					}, 111);
+					btn.trigger('click');
+					
+					b_pos = btn.offset().top;
+					
+				}
+				
+				btn.data('calc-scroll', true)
+				
+			}, 300);
+			
+		}
+		
+	})();
+	*/
 	
 	(function(){
 		

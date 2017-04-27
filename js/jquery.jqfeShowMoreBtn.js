@@ -34,6 +34,8 @@ jquery-плагин
 		
 		init:function(params){
 			
+			var ss = window.sessionStorage || null;
+			
 			var options = $.extend({}, defaults.options, params);
 			this.data(defaults.plugin.name, options);
 				
@@ -58,6 +60,37 @@ jquery-плагин
 				.css({display:'none'})
 				;
 			
+			if(ss) {
+				
+				var _ids = ss.getItem('jqfeShowMoreBtn.ids');
+				
+				if(_ids) {
+					
+					var _ids_arr = _ids.split(',');
+					
+					for(var _i = 0; _i < _ids_arr.length; _i++) {
+						
+						var _id = _ids_arr[_i];
+						
+						item_list
+							.filter('[data-post-id="' + _id + '"]')
+								
+								.css({'display':options.display})
+								.animate(options.css_visible, options.animation_time, function() {
+									// Animation complete.
+									$(this)
+										.removeClass(defaults.class.hidden)
+										.addClass(defaults.class.visible)
+									;
+								})
+								;
+						
+					}
+					
+				}
+				
+			}
+			
 			el
 				.data(defaults.plugin.name, options)
 				.addClass(defaults.class.btn)
@@ -65,6 +98,9 @@ jquery-плагин
 			
 			el.on('click.jqfeShowMoreBtn', function(event){
 				event.preventDefault();
+				
+				var _ids = ss.getItem('jqfeShowMoreBtn.ids') || '';
+				_ids = _ids.split(',');
 				
 				var to_show = item_list.filter('.' + defaults.class.hidden);
 				
@@ -82,9 +118,12 @@ jquery-плагин
 					});
 				}
 				
-				var __anim_el = function() {
+				var __anim_el = function(i) {
 					
 					var item = to_show.eq(i);
+					
+					_ids.push(item.attr('data-post-id'));
+					ss.setItem('jqfeShowMoreBtn.ids', _ids.join(','));
 					
 					item
 						.css({'display':options.display})
