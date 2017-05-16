@@ -85,12 +85,28 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 30px 45px;
+	padding: 20px 45px;
 	@media @media-size-xs{
 		flex-wrap: wrap;
 		padding: 15px 20px;
 	}
-	@media @media-size-sml{padding: 30px 35px;}
+	@media @media-size-sml{padding: 20px 35px;}
+	&._grey{
+		background-color: #cecfd1;
+		justify-content: center;
+    	@media @media-notsmart{min-height: 100px;}
+		@media @media-size-xs{padding: 30px 25px;}
+    	position: relative;
+    	&::before{
+    		content: '';
+    		border: 1px solid @blue;
+    		position: absolute;
+    		left: 10px;
+    		top: 10px;
+    		width: 100%;
+    		height: 100%;
+    	}
+	}
 	/*&._one{
 		background-image: url("@{url-path-img}/temp/bg-action-one.jpg");
     	@media @media-notsmart{min-height: 215px;}
@@ -105,26 +121,6 @@
 		@media @media-size-mdl{padding: 20px;}
 		@media @media-size-xl{padding: 40px 20px;}
 	}*/
-	&._grey{
-		background-color: #cecfd1;
-		justify-content: center;
-    	@media @media-notsmart{min-height: 130px;}
-		@media @media-size-xs{padding: 30px 25px;}
-    	position: relative;
-    	&::before{
-    		content: '';
-    		border: 1px solid @blue;
-    		position: absolute;
-    		left: 15px;
-    		top: 15px;
-    		width: 100%;
-    		height: 100%;
-			@media @media-size-xs{
-	    		left: 10px;
-	    		top: 10px;
-	    	}
-    	}
-	}
 }
 ._iac__item-heading{
 	color: @white;
@@ -149,8 +145,8 @@
 		letter-spacing: 2.5px;			
 	}
 	@media @media-size-xxl{
-		font-size: @b-fs + 34px;//54px;
-		line-height: @b-lh + 34px;//68px;
+		font-size: @b-fs + 30px;//54px;
+		line-height: @b-lh + 30px;//68px;
 		letter-spacing: 3.5px;		
 	}	
 	/*._num{
