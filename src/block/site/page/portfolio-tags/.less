@@ -30,6 +30,8 @@
 }
 .lg-outer{
 	.lg-image{
-		max-height: ~"calc(100% - 200px)"!important;
+		@media @media-notsmart {
+			max-height: ~"calc(100% - 200px)"!important;
+		}
 	}
 }
