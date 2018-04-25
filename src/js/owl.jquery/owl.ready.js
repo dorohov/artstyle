@@ -6,7 +6,7 @@ $(function() {
 		items:8,	
 		navText: [],
 		nav: false,
-		dots: false,
+		dots: true,
 		responsive: {
 			0:{
 				items:3,
